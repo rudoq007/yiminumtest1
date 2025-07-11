@@ -155,7 +155,6 @@
   <script>
     let map = L.map('map').setView([-3.6, 141.3], 14);
 
-    // Satellite basemap
     L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
       attribution: 'Tiles © Esri'
     }).addTo(map);
@@ -163,10 +162,8 @@
     let routeData = [];
     let marker, player, trailLine;
 
-    // Create red trail line
     trailLine = L.polyline([], { color: 'red', weight: 3 }).addTo(map);
 
-    // Custom vehicle marker with div icon (rotatable)
     const vehicleIcon = L.divIcon({
       className: '',
       html: `<div id="vehicle-icon" style="
@@ -187,7 +184,6 @@
         routeData = data.features;
         const latlngs = routeData.map(f => [f.geometry.coordinates[1], f.geometry.coordinates[0]]);
 
-        // Dotted full route
         L.polyline(latlngs, {
           color: '#999',
           weight: 2,
@@ -208,24 +204,27 @@
     function syncMarkerToVideo() {
       if (!player || typeof player.getCurrentTime !== 'function' || routeData.length === 0) return;
 
-      let time = Math.floor(player.getCurrentTime());
-      let pointsWithTime = routeData.filter(f => f.properties.timestamp_sec !== undefined);
+      const time = player.getCurrentTime();
+      const pointsWithTime = routeData.filter(f => f.properties.timestamp_sec !== undefined);
       if (pointsWithTime.length === 0) return;
 
-      // Find closest timestamp match
       let closest = pointsWithTime.reduce((prev, curr) => {
-        return Math.abs(curr.properties.timestamp_sec - time) < Math.abs(prev.properties.timestamp_sec - time) ? curr : prev;
+        return Math.abs(curr.properties.timestamp_sec - time) < Math.abs(prev.properties.timestamp_sec - time)
+          ? curr
+          : prev;
       });
 
       let matchedIndex = pointsWithTime.indexOf(closest);
       if (matchedIndex < 0) return;
 
       let matchedPoint = pointsWithTime[matchedIndex];
-      let [lon, lat] = matchedPoint.geometry.coordinates;
-      let currentLatLng = [lat, lon];
+      if (!matchedPoint.geometry || !matchedPoint.geometry.coordinates) return;
+
+      const [lon, lat] = matchedPoint.geometry.coordinates;
+      const currentLatLng = [lat, lon];
       marker.setLatLng(currentLatLng);
 
-      // Rotate vehicle icon
+      // Rotate marker
       if (matchedIndex < pointsWithTime.length - 1) {
         let [lon1, lat1] = matchedPoint.geometry.coordinates;
         let [lon2, lat2] = pointsWithTime[matchedIndex + 1].geometry.coordinates;
@@ -235,15 +234,21 @@
         if (iconEl) iconEl.style.transform = `rotate(${angleDeg}deg)`;
       }
 
-      // Draw trail up to current index
-      let trailCoords = pointsWithTime.slice(0, matchedIndex + 1).map(f => {
+      // Update trail
+      const trailCoords = pointsWithTime.slice(0, matchedIndex + 1).map(f => {
         let [lon, lat] = f.geometry.coordinates;
         return [lat, lon];
       });
       trailLine.setLatLngs(trailCoords);
 
       // Update distance
-      document.getElementById('dist').innerText = matchedPoint.properties.cum_distance_km.toFixed(2);
+      const dist = matchedPoint.properties.cum_distance_km;
+      if (!isNaN(dist)) {
+        document.getElementById('dist').innerText = dist.toFixed(2);
+      }
+
+      // Debug
+      // console.log(`Time: ${time.toFixed(2)}s | Distance: ${dist.toFixed(2)} km`);
     }
   </script>
 </body>
