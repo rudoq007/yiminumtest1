@@ -128,7 +128,7 @@
       const [lon2, lat2] = points[matchedIndex + 1].geometry.coordinates;
       const angleRad = Math.atan2(lat2 - lat1, lon2 - lon1);
       const angleDeg = angleRad * (180 / Math.PI);
-      vehicle.style.transform = `rotate(${angleDeg}deg)`;
+      vehicle.style.transform = `rotate(${angleDeg + 90}deg)`;
     }
 
     const coords = points.slice(0, matchedIndex + 1).map(f => f.geometry.coordinates);
