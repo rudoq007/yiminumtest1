@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <title>Yiminum–Wilbowe Road | MapLibre OSM Viewer</title>
+  <title>Yiminum–Wilbowe Road | Satellite + 3D Terrain</title>
   <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
   <link href="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.css" rel="stylesheet" />
   <script src="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.js"></script>
@@ -49,18 +49,33 @@
     style: {
       version: 8,
       sources: {
-        "osm": {
+        esri_sat: {
           type: "raster",
-          tiles: ["https://tile.openstreetmap.org/{z}/{x}/{y}.png"],
+          tiles: [
+            "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
+          ],
           tileSize: 256,
-          attribution: "© OpenStreetMap contributors"
+          attribution: "© Esri, Maxar, Earthstar Geographics"
+        },
+        terrain: {
+          type: "raster-dem",
+          tiles: [
+            "https://api.maptiler.com/tiles/terrain-rgb/{z}/{x}/{y}.webp?key=HuOH81AfcUjWmWWWJ8Yn"
+          ],
+          tileSize: 256,
+          maxzoom: 14
         }
       },
-      layers: [{
-        id: "osm",
-        type: "raster",
-        source: "osm"
-      }]
+      layers: [
+        {
+          id: "esri_sat",
+          type: "raster",
+          source: "esri_sat",
+          minzoom: 0,
+          maxzoom: 22
+        }
+      ],
+      terrain: { source: "terrain", exaggeration: 1.5 }
     },
     center: [142.503768, -3.679434],
     zoom: 15,
@@ -128,7 +143,7 @@
       const [lon2, lat2] = points[matchedIndex + 1].geometry.coordinates;
       const angleRad = Math.atan2(lat2 - lat1, lon2 - lon1);
       const angleDeg = angleRad * (180 / Math.PI);
-      vehicle.style.transform = `rotate(${angleDeg + 90}deg)`;
+      vehicle.style.transform = `rotate(${angleDeg - 90}deg)`; // Forward-facing fix
     }
 
     const coords = points.slice(0, matchedIndex + 1).map(f => f.geometry.coordinates);
