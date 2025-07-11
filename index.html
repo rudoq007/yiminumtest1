@@ -5,39 +5,48 @@
   <meta charset="utf-8" />
   <style>
     body { margin: 0; padding: 0; font-family: Arial, sans-serif; }
+
     #header {
       padding: 16px;
-      background-color: #f4f4f4;
-      border-bottom: 1px solid #ccc;
+      background: linear-gradient(135deg, #4e91fc, #1c70d4);
+      color: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
+
     #header h1 {
       margin: 0;
-      font-size: 22px;
+      font-size: 24px;
     }
+
     #header p {
       margin: 4px 0 0;
       font-size: 14px;
-      color: #555;
+      color: #e0e0e0;
     }
+
     #content {
       display: flex;
       flex-direction: column;
       height: calc(100vh - 80px);
     }
+
     #video {
       width: 100%;
       height: 40%;
       border-bottom: 2px solid #ccc;
     }
+
     #map {
       width: 100%;
       height: 60%;
     }
+
     iframe {
       width: 100%;
       height: 100%;
       border: none;
     }
+
     #infoBox {
       position: fixed;
       bottom: 10px;
@@ -49,6 +58,7 @@
       box-shadow: 0 0 5px rgba(0,0,0,0.3);
       z-index: 1000;
     }
+
     @media (max-width: 768px) {
       #content {
         height: auto;
@@ -83,18 +93,30 @@
   </div>
 
   <div id="infoBox">
-    <strong>Distance Travelled</strong><br>
+    <strong>Distance Travelled:</strong><br>
     <span id="dist">0.00</span> km
   </div>
 
   <script>
     let map = L.map('map').setView([-3.6, 141.3], 14);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '© OpenStreetMap contributors'
+
+    // High-resolution satellite basemap
+    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+      attribution: 'Tiles © Esri'
     }).addTo(map);
 
     let routeData = [];
-    let marker, player;
+    let marker, player, trailLine;
+
+    // Add moving trail line (red)
+    trailLine = L.polyline([], { color: 'red', weight: 3 }).addTo(map);
+
+    // Custom vehicle icon
+    const vehicleIcon = L.icon({
+      iconUrl: 'https://cdn-icons-png.flaticon.com/512/854/854878.png',
+      iconSize: [36, 36],
+      iconAnchor: [18, 18]
+    });
 
     fetch('yiminum_wilbowe_timestamped.geojson')
       .then(res => res.json())
@@ -104,7 +126,7 @@
         const latlngs = routeData.map(f => [f.geometry.coordinates[1], f.geometry.coordinates[0]]);
         L.polyline(latlngs, { color: 'blue' }).addTo(map);
 
-        marker = L.marker(latlngs[0]).addTo(map);
+        marker = L.marker(latlngs[0], { icon: vehicleIcon }).addTo(map);
         map.fitBounds(latlngs);
 
         setInterval(syncMarkerToVideo, 1000);
@@ -118,18 +140,40 @@
       if (!player || typeof player.getCurrentTime !== 'function' || routeData.length === 0) return;
 
       let time = Math.floor(player.getCurrentTime());
-
       let pointsWithTime = routeData.filter(f => f.properties.timestamp_sec !== undefined);
-      if (pointsWithTime.length === 0) return;
+      if (pointsWithTime.length < 2) return;
 
-      let match = pointsWithTime.reduce((prev, curr) => {
-        return Math.abs(curr.properties.timestamp_sec - time) < Math.abs(prev.properties.timestamp_sec - time) ? curr : prev;
-      });
+      for (let i = 0; i < pointsWithTime.length - 1; i++) {
+        let curr = pointsWithTime[i];
+        let next = pointsWithTime[i + 1];
 
-      if (match && match.geometry && match.properties) {
-        let [lon, lat] = match.geometry.coordinates;
-        marker.setLatLng([lat, lon]);
-        document.getElementById('dist').innerText = match.properties.cum_distance_km.toFixed(2);
+        if (time >= curr.properties.timestamp_sec && time <= next.properties.timestamp_sec) {
+          let t1 = curr.properties.timestamp_sec;
+          let t2 = next.properties.timestamp_sec;
+          let ratio = (time - t1) / (t2 - t1);
+
+          let [lon1, lat1] = curr.geometry.coordinates;
+          let [lon2, lat2] = next.geometry.coordinates;
+
+          let lat = lat1 + (lat2 - lat1) * ratio;
+          let lon = lon1 + (lon2 - lon1) * ratio;
+
+          let currentLatLng = [lat, lon];
+          marker.setLatLng(currentLatLng);
+
+          // Update trail
+          let existingLatLngs = trailLine.getLatLngs();
+          existingLatLngs.push(currentLatLng);
+          if (existingLatLngs.length > 50) existingLatLngs.shift(); // Limit trail length
+          trailLine.setLatLngs(existingLatLngs);
+
+          // Update distance display
+          let dist = curr.properties.cum_distance_km + 
+                     (next.properties.cum_distance_km - curr.properties.cum_distance_km) * ratio;
+          document.getElementById('dist').innerText = dist.toFixed(2);
+
+          break;
+        }
       }
     }
   </script>
