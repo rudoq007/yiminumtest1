@@ -163,24 +163,31 @@
     let routeData = [];
     let marker, player, trailLine;
 
-    // Trail line for traveled path
+    // Create red trail line
     trailLine = L.polyline([], { color: 'red', weight: 3 }).addTo(map);
 
-    // Vehicle icon
-    const vehicleIcon = L.icon({
-      iconUrl: 'https://cdn-icons-png.flaticon.com/512/744/744465.png',
-      iconSize: [38, 38],
-      iconAnchor: [19, 19]
+    // Custom vehicle marker with div icon (rotatable)
+    const vehicleIcon = L.divIcon({
+      className: '',
+      html: `<div id="vehicle-icon" style="
+        width: 40px;
+        height: 40px;
+        background-image: url('https://cdn-icons-png.flaticon.com/512/744/744465.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: rotate(270deg);">
+      </div>`,
+      iconSize: [40, 40],
+      iconAnchor: [20, 20],
     });
 
     fetch('yiminum_wilbowe_timestamped.geojson')
       .then(res => res.json())
       .then(data => {
         routeData = data.features;
-
         const latlngs = routeData.map(f => [f.geometry.coordinates[1], f.geometry.coordinates[0]]);
 
-        // Dotted line for full route
+        // Dotted full route
         L.polyline(latlngs, {
           color: '#999',
           weight: 2,
@@ -205,34 +212,37 @@
       let pointsWithTime = routeData.filter(f => f.properties.timestamp_sec !== undefined);
       if (pointsWithTime.length === 0) return;
 
-      let matchedIndex = -1;
-      for (let i = 0; i < pointsWithTime.length; i++) {
-        if (time === pointsWithTime[i].properties.timestamp_sec) {
-          matchedIndex = i;
-          break;
-        }
-        if (pointsWithTime[i].properties.timestamp_sec > time) {
-          matchedIndex = i - 1;
-          break;
-        }
-      }
+      // Find closest timestamp match
+      let closest = pointsWithTime.reduce((prev, curr) => {
+        return Math.abs(curr.properties.timestamp_sec - time) < Math.abs(prev.properties.timestamp_sec - time) ? curr : prev;
+      });
 
-      if (matchedIndex < 0) matchedIndex = 0;
-      if (matchedIndex >= pointsWithTime.length) matchedIndex = pointsWithTime.length - 1;
+      let matchedIndex = pointsWithTime.indexOf(closest);
+      if (matchedIndex < 0) return;
 
       let matchedPoint = pointsWithTime[matchedIndex];
       let [lon, lat] = matchedPoint.geometry.coordinates;
       let currentLatLng = [lat, lon];
       marker.setLatLng(currentLatLng);
 
-      // Update red trail line
+      // Rotate vehicle icon
+      if (matchedIndex < pointsWithTime.length - 1) {
+        let [lon1, lat1] = matchedPoint.geometry.coordinates;
+        let [lon2, lat2] = pointsWithTime[matchedIndex + 1].geometry.coordinates;
+        let angleRad = Math.atan2(lat2 - lat1, lon2 - lon1);
+        let angleDeg = angleRad * (180 / Math.PI);
+        let iconEl = marker.getElement()?.querySelector('#vehicle-icon');
+        if (iconEl) iconEl.style.transform = `rotate(${angleDeg}deg)`;
+      }
+
+      // Draw trail up to current index
       let trailCoords = pointsWithTime.slice(0, matchedIndex + 1).map(f => {
         let [lon, lat] = f.geometry.coordinates;
         return [lat, lon];
       });
       trailLine.setLatLngs(trailCoords);
 
-      // Update distance display
+      // Update distance
       document.getElementById('dist').innerText = matchedPoint.properties.cum_distance_km.toFixed(2);
     }
   </script>
