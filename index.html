@@ -59,6 +59,55 @@
       z-index: 1000;
     }
 
+    #legend {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      background: rgba(255,255,255,0.9);
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.3);
+      z-index: 1000;
+      line-height: 1.6;
+    }
+
+    #legend div {
+      display: flex;
+      align-items: center;
+      margin-bottom: 6px;
+    }
+
+    #legend span {
+      width: 18px;
+      height: 6px;
+      margin-right: 8px;
+      display: inline-block;
+      border-radius: 2px;
+    }
+
+    #legend .trail-line {
+      background: red;
+    }
+
+    #legend .route-line {
+      background: repeating-linear-gradient(
+        to right,
+        #999 0,
+        #999 5px,
+        transparent 5px,
+        transparent 13px
+      );
+    }
+
+    #legend .vehicle-icon {
+      width: 20px;
+      height: 20px;
+      background: url('https://cdn-icons-png.flaticon.com/512/744/744465.png') no-repeat center center / contain;
+      margin-right: 8px;
+      border-radius: 2px;
+    }
+
     @media (max-width: 768px) {
       #content {
         height: auto;
@@ -66,7 +115,7 @@
       #video, #map {
         height: 50vh;
       }
-      #infoBox {
+      #infoBox, #legend {
         bottom: 70px;
         left: 10px;
       }
@@ -97,10 +146,16 @@
     <span id="dist">0.00</span> km
   </div>
 
+  <div id="legend">
+    <div><span class="trail-line"></span> Travelled Path</div>
+    <div><span class="route-line"></span> Planned Route</div>
+    <div><span class="vehicle-icon"></span> Current Location</div>
+  </div>
+
   <script>
     let map = L.map('map').setView([-3.6, 141.3], 14);
 
-    // High-resolution satellite basemap
+    // Satellite basemap
     L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
       attribution: 'Tiles © Esri'
     }).addTo(map);
@@ -108,14 +163,14 @@
     let routeData = [];
     let marker, player, trailLine;
 
-    // Add moving trail line (red)
+    // Trail line for traveled path
     trailLine = L.polyline([], { color: 'red', weight: 3 }).addTo(map);
 
-    // Custom vehicle icon
+    // Vehicle icon
     const vehicleIcon = L.icon({
-      iconUrl: 'https://cdn-icons-png.flaticon.com/512/854/854878.png',
-      iconSize: [36, 36],
-      iconAnchor: [18, 18]
+      iconUrl: 'https://cdn-icons-png.flaticon.com/512/744/744465.png',
+      iconSize: [38, 38],
+      iconAnchor: [19, 19]
     });
 
     fetch('yiminum_wilbowe_timestamped.geojson')
@@ -124,7 +179,14 @@
         routeData = data.features;
 
         const latlngs = routeData.map(f => [f.geometry.coordinates[1], f.geometry.coordinates[0]]);
-        L.polyline(latlngs, { color: 'blue' }).addTo(map);
+
+        // Dotted line for full route
+        L.polyline(latlngs, {
+          color: '#999',
+          weight: 2,
+          dashArray: '5,8',
+          opacity: 0.8
+        }).addTo(map);
 
         marker = L.marker(latlngs[0], { icon: vehicleIcon }).addTo(map);
         map.fitBounds(latlngs);
@@ -141,40 +203,37 @@
 
       let time = Math.floor(player.getCurrentTime());
       let pointsWithTime = routeData.filter(f => f.properties.timestamp_sec !== undefined);
-      if (pointsWithTime.length < 2) return;
+      if (pointsWithTime.length === 0) return;
 
-      for (let i = 0; i < pointsWithTime.length - 1; i++) {
-        let curr = pointsWithTime[i];
-        let next = pointsWithTime[i + 1];
-
-        if (time >= curr.properties.timestamp_sec && time <= next.properties.timestamp_sec) {
-          let t1 = curr.properties.timestamp_sec;
-          let t2 = next.properties.timestamp_sec;
-          let ratio = (time - t1) / (t2 - t1);
-
-          let [lon1, lat1] = curr.geometry.coordinates;
-          let [lon2, lat2] = next.geometry.coordinates;
-
-          let lat = lat1 + (lat2 - lat1) * ratio;
-          let lon = lon1 + (lon2 - lon1) * ratio;
-
-          let currentLatLng = [lat, lon];
-          marker.setLatLng(currentLatLng);
-
-          // Update trail
-          let existingLatLngs = trailLine.getLatLngs();
-          existingLatLngs.push(currentLatLng);
-          if (existingLatLngs.length > 50) existingLatLngs.shift(); // Limit trail length
-          trailLine.setLatLngs(existingLatLngs);
-
-          // Update distance display
-          let dist = curr.properties.cum_distance_km + 
-                     (next.properties.cum_distance_km - curr.properties.cum_distance_km) * ratio;
-          document.getElementById('dist').innerText = dist.toFixed(2);
-
+      let matchedIndex = -1;
+      for (let i = 0; i < pointsWithTime.length; i++) {
+        if (time === pointsWithTime[i].properties.timestamp_sec) {
+          matchedIndex = i;
+          break;
+        }
+        if (pointsWithTime[i].properties.timestamp_sec > time) {
+          matchedIndex = i - 1;
           break;
         }
       }
+
+      if (matchedIndex < 0) matchedIndex = 0;
+      if (matchedIndex >= pointsWithTime.length) matchedIndex = pointsWithTime.length - 1;
+
+      let matchedPoint = pointsWithTime[matchedIndex];
+      let [lon, lat] = matchedPoint.geometry.coordinates;
+      let currentLatLng = [lat, lon];
+      marker.setLatLng(currentLatLng);
+
+      // Update red trail line
+      let trailCoords = pointsWithTime.slice(0, matchedIndex + 1).map(f => {
+        let [lon, lat] = f.geometry.coordinates;
+        return [lat, lon];
+      });
+      trailLine.setLatLngs(trailCoords);
+
+      // Update distance display
+      document.getElementById('dist').innerText = matchedPoint.properties.cum_distance_km.toFixed(2);
     }
   </script>
 </body>
