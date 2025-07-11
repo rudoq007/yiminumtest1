@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <title>Yiminum–Wilbowe Road | Satellite + 3D Terrain</title>
+  <title>Yiminum–Wilbowe Road | 3D Satellite Map</title>
   <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
   <link href="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.css" rel="stylesheet" />
   <script src="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.js"></script>
@@ -74,8 +74,7 @@
           minzoom: 0,
           maxzoom: 22
         }
-      ],
-      terrain: { source: "terrain", exaggeration: 1.5 }
+      ]
     },
     center: [142.503768, -3.679434],
     zoom: 15,
@@ -91,6 +90,9 @@
   marker = new maplibregl.Marker({ element: vehicle }).setLngLat([142.503768, -3.679434]).addTo(map);
 
   map.on('load', () => {
+    // Apply terrain after map load
+    map.setTerrain({ source: "terrain", exaggeration: 2.5 });
+
     map.addSource('trail', {
       type: 'geojson',
       data: {
@@ -143,7 +145,7 @@
       const [lon2, lat2] = points[matchedIndex + 1].geometry.coordinates;
       const angleRad = Math.atan2(lat2 - lat1, lon2 - lon1);
       const angleDeg = angleRad * (180 / Math.PI);
-      vehicle.style.transform = `rotate(${angleDeg - 90}deg)`; // Forward-facing fix
+      vehicle.style.transform = `rotate(${angleDeg + 90}deg)`; // Corrected forward orientation
     }
 
     const coords = points.slice(0, matchedIndex + 1).map(f => f.geometry.coordinates);
