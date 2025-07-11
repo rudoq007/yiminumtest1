@@ -1,255 +1,98 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Yiminum–Wilbowe Road Video Map</title>
+  <title>Yiminum–Wilbowe 3D Map (Mapbox GL JS)</title>
   <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
   <style>
-    body { margin: 0; padding: 0; font-family: Arial, sans-serif; }
-
-    #header {
-      padding: 16px;
-      background: linear-gradient(135deg, #4e91fc, #1c70d4);
-      color: white;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    }
-
-    #header h1 {
-      margin: 0;
-      font-size: 24px;
-    }
-
-    #header p {
-      margin: 4px 0 0;
-      font-size: 14px;
-      color: #e0e0e0;
-    }
-
-    #content {
-      display: flex;
-      flex-direction: column;
-      height: calc(100vh - 80px);
-    }
-
-    #video {
-      width: 100%;
-      height: 40%;
-      border-bottom: 2px solid #ccc;
-    }
-
-    #map {
-      width: 100%;
-      height: 60%;
-    }
-
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-
-    #infoBox {
-      position: fixed;
+    body { margin: 0; padding: 0; font-family: sans-serif; }
+    #map { position: absolute; top: 40%; bottom: 0; width: 100%; }
+    #video { width: 100%; height: 40%; border-bottom: 2px solid #ccc; }
+    #distBox {
+      position: absolute;
       bottom: 10px;
       left: 10px;
-      background: rgba(255,255,255,0.9);
-      padding: 10px;
-      border-radius: 8px;
-      font-size: 14px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.3);
-      z-index: 1000;
-    }
-
-    #legend {
-      position: fixed;
-      bottom: 10px;
-      right: 10px;
-      background: rgba(255,255,255,0.9);
-      padding: 10px 14px;
-      border-radius: 8px;
+      background: rgba(255,255,255,0.85);
+      padding: 8px 12px;
+      border-radius: 6px;
       font-size: 13px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.3);
-      z-index: 1000;
-      line-height: 1.6;
-    }
-
-    #legend div {
-      display: flex;
-      align-items: center;
-      margin-bottom: 6px;
-    }
-
-    #legend span {
-      width: 18px;
-      height: 6px;
-      margin-right: 8px;
-      display: inline-block;
-      border-radius: 2px;
-    }
-
-    #legend .trail-line {
-      background: red;
-    }
-
-    #legend .route-line {
-      background: repeating-linear-gradient(
-        to right,
-        #999 0,
-        #999 5px,
-        transparent 5px,
-        transparent 13px
-      );
-    }
-
-    #legend .vehicle-icon {
-      width: 20px;
-      height: 20px;
-      background: url('https://cdn-icons-png.flaticon.com/512/744/744465.png') no-repeat center center / contain;
-      margin-right: 8px;
-      border-radius: 2px;
-    }
-
-    @media (max-width: 768px) {
-      #content {
-        height: auto;
-      }
-      #video, #map {
-        height: 50vh;
-      }
-      #infoBox, #legend {
-        bottom: 70px;
-        left: 10px;
-      }
+      z-index: 1;
     }
   </style>
-
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <script src="https://www.youtube.com/iframe_api"></script>
 </head>
 <body>
-  <div id="header">
-    <h1>Yiminum–Wilbowe Road Video Map</h1>
-    <p>Follow the road journey through Nuku District in West Sepik Province with synchronized video and GPS tracking (25 June 2025).</p>
-  </div>
 
-  <div id="content">
-    <div id="video">
-      <iframe id="ytplayer" type="text/html"
-        src="https://www.youtube.com/embed/I45Jv-qWLEY?enablejsapi=1&rel=0"
-        frameborder="0" allowfullscreen></iframe>
-    </div>
-    <div id="map"></div>
-  </div>
+<div id="video">
+  <iframe id="ytplayer"
+    src="https://www.youtube.com/embed/I45Jv-qWLEY?enablejsapi=1&rel=0"
+    frameborder="0"
+    allowfullscreen
+    style="width:100%; height:100%;">
+  </iframe>
+</div>
 
-  <div id="infoBox">
-    <strong>Distance Travelled:</strong><br>
-    <span id="dist">0.00</span> km
-  </div>
+<div id="map"></div>
+<div id="distBox">Distance Travelled: <span id="dist">0.00</span> km</div>
 
-  <div id="legend">
-    <div><span class="trail-line"></span> Travelled Path</div>
-    <div><span class="route-line"></span> Planned Route</div>
-    <div><span class="vehicle-icon"></span> Current Location</div>
-  </div>
+<script>
+  mapboxgl.accessToken = 'pk.eyJ1IjoicnB1a2EtMjAyMyIsImEiOiJjbGZ1Z2JidnAwMW84M3NudWwxMnliZDEzIn0.cVQ5fg8pJidSLrGq4I4vGQ';
 
-  <script>
-    let map = L.map('map').setView([-3.6, 141.3], 14);
+  const map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/satellite-v9',
+    center: [142.503768133, -3.679434133], // default starting point
+    zoom: 15,
+    pitch: 60,
+    bearing: 90,
+    antialias: true
+  });
 
-    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-      attribution: 'Tiles © Esri'
-    }).addTo(map);
+  // Placeholder marker
+  let marker = new mapboxgl.Marker({ color: 'red' })
+    .setLngLat([142.503768133, -3.679434133])
+    .addTo(map);
 
-    let routeData = [];
-    let marker, player, trailLine;
+  let geoData, player;
 
-    trailLine = L.polyline([], { color: 'red', weight: 3 }).addTo(map);
-
-    const vehicleIcon = L.divIcon({
-      className: '',
-      html: `<div id="vehicle-icon" style="
-        width: 40px;
-        height: 40px;
-        background-image: url('https://cdn-icons-png.flaticon.com/512/744/744465.png');
-        background-size: contain;
-        background-repeat: no-repeat;
-        transform: rotate(270deg);">
-      </div>`,
-      iconSize: [40, 40],
-      iconAnchor: [20, 20],
+  fetch('yiminum_wilbowe_timestamped.geojson')
+    .then(res => res.json())
+    .then(data => {
+      geoData = data.features;
+      setInterval(syncWithVideo, 1000);
     });
 
-    fetch('yiminum_wilbowe_timestamped.geojson')
-      .then(res => res.json())
-      .then(data => {
-        routeData = data.features;
-        const latlngs = routeData.map(f => [f.geometry.coordinates[1], f.geometry.coordinates[0]]);
+  function onYouTubeIframeAPIReady() {
+    player = new YT.Player('ytplayer');
+  }
 
-        L.polyline(latlngs, {
-          color: '#999',
-          weight: 2,
-          dashArray: '5,8',
-          opacity: 0.8
-        }).addTo(map);
+  function syncWithVideo() {
+    if (!player || !geoData || geoData.length === 0) return;
+    let time = player.getCurrentTime();
+    let closest = geoData.reduce((prev, curr) => {
+      return Math.abs(curr.properties.timestamp_sec - time) < Math.abs(prev.properties.timestamp_sec - time)
+        ? curr : prev;
+    });
 
-        marker = L.marker(latlngs[0], { icon: vehicleIcon }).addTo(map);
-        map.fitBounds(latlngs);
+    let [lon, lat] = closest.geometry.coordinates;
+    let dist = closest.properties.cum_distance_km || 0;
 
-        setInterval(syncMarkerToVideo, 1000);
-      });
+    marker.setLngLat([lon, lat]);
 
-    function onYouTubeIframeAPIReady() {
-      player = new YT.Player('ytplayer');
-    }
+    map.flyTo({
+      center: [lon, lat],
+      zoom: 17,
+      pitch: 60,
+      bearing: 90,
+      speed: 0.8,
+      curve: 1.2
+    });
 
-    function syncMarkerToVideo() {
-      if (!player || typeof player.getCurrentTime !== 'function' || routeData.length === 0) return;
+    document.getElementById('dist').innerText = dist.toFixed(2);
+  }
+</script>
 
-      const time = player.getCurrentTime();
-      const pointsWithTime = routeData.filter(f => f.properties.timestamp_sec !== undefined);
-      if (pointsWithTime.length === 0) return;
-
-      let closest = pointsWithTime.reduce((prev, curr) => {
-        return Math.abs(curr.properties.timestamp_sec - time) < Math.abs(prev.properties.timestamp_sec - time)
-          ? curr
-          : prev;
-      });
-
-      let matchedIndex = pointsWithTime.indexOf(closest);
-      if (matchedIndex < 0) return;
-
-      let matchedPoint = pointsWithTime[matchedIndex];
-      if (!matchedPoint.geometry || !matchedPoint.geometry.coordinates) return;
-
-      const [lon, lat] = matchedPoint.geometry.coordinates;
-      const currentLatLng = [lat, lon];
-      marker.setLatLng(currentLatLng);
-
-      // Rotate marker
-      if (matchedIndex < pointsWithTime.length - 1) {
-        let [lon1, lat1] = matchedPoint.geometry.coordinates;
-        let [lon2, lat2] = pointsWithTime[matchedIndex + 1].geometry.coordinates;
-        let angleRad = Math.atan2(lat2 - lat1, lon2 - lon1);
-        let angleDeg = angleRad * (180 / Math.PI);
-        let iconEl = marker.getElement()?.querySelector('#vehicle-icon');
-        if (iconEl) iconEl.style.transform = `rotate(${angleDeg}deg)`;
-      }
-
-      // Update trail
-      const trailCoords = pointsWithTime.slice(0, matchedIndex + 1).map(f => {
-        let [lon, lat] = f.geometry.coordinates;
-        return [lat, lon];
-      });
-      trailLine.setLatLngs(trailCoords);
-
-      // Update distance
-      const dist = matchedPoint.properties.cum_distance_km;
-      if (!isNaN(dist)) {
-        document.getElementById('dist').innerText = dist.toFixed(2);
-      }
-
-      // Debug
-      // console.log(`Time: ${time.toFixed(2)}s | Distance: ${dist.toFixed(2)} km`);
-    }
-  </script>
+<script src="https://www.youtube.com/iframe_api"></script>
 </body>
 </html>
