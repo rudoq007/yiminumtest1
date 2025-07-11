@@ -90,8 +90,7 @@
   marker = new maplibregl.Marker({ element: vehicle }).setLngLat([142.503768, -3.679434]).addTo(map);
 
   map.on('load', () => {
-    // Apply terrain after map load
-    map.setTerrain({ source: "terrain", exaggeration: 2.5 });
+    map.setTerrain({ source: "terrain", exaggeration: 5.0 });
 
     map.addSource('trail', {
       type: 'geojson',
@@ -145,7 +144,7 @@
       const [lon2, lat2] = points[matchedIndex + 1].geometry.coordinates;
       const angleRad = Math.atan2(lat2 - lat1, lon2 - lon1);
       const angleDeg = angleRad * (180 / Math.PI);
-      vehicle.style.transform = `rotate(${angleDeg + 90}deg)`; // Corrected forward orientation
+      vehicle.style.transform = `rotate(${angleDeg - 90}deg)`;  // reversed for correct orientation
     }
 
     const coords = points.slice(0, matchedIndex + 1).map(f => f.geometry.coordinates);
