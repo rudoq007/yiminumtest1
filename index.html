@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <title>Yiminum–Wilbowe Road | MapLibre 3D Viewer</title>
+  <title>Yiminum–Wilbowe Road | MapLibre OSM Viewer</title>
   <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
   <link href="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.css" rel="stylesheet" />
   <script src="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.js"></script>
@@ -44,9 +44,24 @@
 <div id="info">Distance Travelled: <span id="dist">0.00</span> km</div>
 
 <script>
-  let map = new maplibregl.Map({
+  const map = new maplibregl.Map({
     container: 'map',
-    style: 'https://demotiles.maplibre.org/style.json',
+    style: {
+      version: 8,
+      sources: {
+        "osm": {
+          type: "raster",
+          tiles: ["https://tile.openstreetmap.org/{z}/{x}/{y}.png"],
+          tileSize: 256,
+          attribution: "© OpenStreetMap contributors"
+        }
+      },
+      layers: [{
+        id: "osm",
+        type: "raster",
+        source: "osm"
+      }]
+    },
     center: [142.503768, -3.679434],
     zoom: 15,
     pitch: 60,
@@ -54,9 +69,8 @@
     antialias: true
   });
 
-  let routeData = [], marker = null, trail = null, player = null;
+  let routeData = [], marker = null, player = null;
 
-  // Create rotating marker
   const vehicle = document.createElement('div');
   vehicle.className = 'vehicle-icon';
   marker = new maplibregl.Marker({ element: vehicle }).setLngLat([142.503768, -3.679434]).addTo(map);
@@ -109,7 +123,6 @@
     marker.setLngLat([lon, lat]);
     map.easeTo({ center: [lon, lat], duration: 500 });
 
-    // Rotate icon
     if (matchedIndex < points.length - 1) {
       const [lon1, lat1] = closest.geometry.coordinates;
       const [lon2, lat2] = points[matchedIndex + 1].geometry.coordinates;
@@ -118,7 +131,6 @@
       vehicle.style.transform = `rotate(${angleDeg}deg)`;
     }
 
-    // Update trail line
     const coords = points.slice(0, matchedIndex + 1).map(f => f.geometry.coordinates);
     map.getSource('trail').setData({
       type: 'Feature',
@@ -128,7 +140,6 @@
       }
     });
 
-    // Update distance display
     const dist = closest.properties.cum_distance_km || 0;
     document.getElementById('dist').innerText = dist.toFixed(2);
   }
