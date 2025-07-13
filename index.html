@@ -60,7 +60,7 @@
       maxzoom: 14
     });
 
-    map.setTerrain({ source: 'terrain', exaggeration: 2.8 });
+    map.setTerrain({ source: 'terrain', exaggeration: 1.8 });
 
     map.addLayer({
       id: 'sky',
@@ -108,7 +108,7 @@
     el.style.backgroundImage = "url('https://cdn-icons-png.flaticon.com/512/744/744465.png')";
     el.style.backgroundSize = 'contain';
     el.style.backgroundRepeat = 'no-repeat';
-    el.style.transform = 'rotate(90deg)';
+    el.style.transform = 'rotate(-180deg)';
 
     marker = new maplibregl.Marker(el)
       .setLngLat([142.503768133, -3.679434133])
@@ -142,7 +142,7 @@
       let [lon1, lat1] = closest.geometry.coordinates;
       let [lon2, lat2] = points[index + 1].geometry.coordinates;
       let angle = Math.atan2(lat2 - lat1, lon2 - lon1) * 180 / Math.PI;
-      marker.getElement().style.transform = `rotate(${angle}deg)`;
+      marker.getElement().style.transform = `rotate(${angle - 180}deg)`;
     }
 
     // Add to trail
@@ -155,15 +155,14 @@
       }
     });
 
-    // Follow camera
-    map.flyTo({
+    // Smooth follow camera
+    map.easeTo({
       center: [lon, lat],
       zoom: 17,
       bearing: 90,
       pitch: 60,
-      speed: 0.7,
-      curve: 1.2,
-      essential: true
+      duration: 1000,
+      easing: t => t
     });
 
     // Update distance
