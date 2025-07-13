@@ -60,7 +60,7 @@
       maxzoom: 14
     });
 
-    map.setTerrain({ source: 'terrain', exaggeration: 1.8 });
+    map.setTerrain({ source: 'terrain', exaggeration: 1.2 });
 
     map.addLayer({
       id: 'sky',
@@ -105,10 +105,10 @@
     let el = document.createElement('div');
     el.style.width = '30px';
     el.style.height = '30px';
-    el.style.backgroundImage = "url('https://cdn-icons-png.flaticon.com/512/744/744465.png')";
+    el.style.backgroundImage = "url('https://upload.wikimedia.org/wikipedia/commons/e/ec/RedDot.svg')";
     el.style.backgroundSize = 'contain';
     el.style.backgroundRepeat = 'no-repeat';
-    el.style.transform = 'rotate(-180deg)';
+    el.style.transform = 'none';
 
     marker = new maplibregl.Marker(el)
       .setLngLat([142.503768133, -3.679434133])
@@ -142,7 +142,7 @@
       let [lon1, lat1] = closest.geometry.coordinates;
       let [lon2, lat2] = points[index + 1].geometry.coordinates;
       let angle = Math.atan2(lat2 - lat1, lon2 - lon1) * 180 / Math.PI;
-      marker.getElement().style.transform = `rotate(${angle - 180}deg)`;
+      // No rotation needed for red dot marker
     }
 
     // Add to trail
