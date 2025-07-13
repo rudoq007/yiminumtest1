@@ -1,32 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>Yiminum–Wilbowe Road (3D Terrain)</title>
   <meta charset="utf-8" />
-  <title>Yiminum–Wilbowe Road | 3D Satellite Map</title>
   <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
-  <link href="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.css" rel="stylesheet" />
   <script src="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.js"></script>
-  <script src="https://www.youtube.com/iframe_api"></script>
+  <link href="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.css" rel="stylesheet" />
   <style>
     body { margin: 0; font-family: sans-serif; }
-    #video { height: 45vh; width: 100%; }
+    #video { height: 45vh; width: 100%; border-bottom: 2px solid #ccc; }
     #map { height: 55vh; width: 100%; }
-    #info {
+    #infoBox {
       position: absolute;
       bottom: 10px;
       left: 10px;
       background: rgba(255,255,255,0.85);
       padding: 8px 12px;
-      font-size: 13px;
       border-radius: 6px;
-      z-index: 999;
-    }
-    .vehicle-icon {
-      background-image: url('https://cdn-icons-png.flaticon.com/512/744/744465.png');
-      background-size: contain;
-      width: 40px;
-      height: 40px;
-      transform-origin: center;
+      font-size: 13px;
+      z-index: 1;
     }
   </style>
 </head>
@@ -35,68 +27,57 @@
 <div id="video">
   <iframe id="ytplayer"
     src="https://www.youtube.com/embed/I45Jv-qWLEY?enablejsapi=1&rel=0"
-    frameborder="0" allowfullscreen
+    frameborder="0"
+    allowfullscreen
     style="width:100%; height:100%;">
   </iframe>
 </div>
 
 <div id="map"></div>
-<div id="info">Distance Travelled: <span id="dist">0.00</span> km</div>
+<div id="infoBox">Distance Travelled: <span id="dist">0.00</span> km</div>
 
+<script src="https://www.youtube.com/iframe_api"></script>
 <script>
-  const map = new maplibregl.Map({
+  let map, player, geoData = [], marker, trailLine;
+  let started = false;
+
+  map = new maplibregl.Map({
     container: 'map',
-    style: {
-      version: 8,
-      sources: {
-        esri_sat: {
-          type: "raster",
-          tiles: [
-            "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
-          ],
-          tileSize: 256,
-          attribution: "© Esri, Maxar, Earthstar Geographics"
-        },
-        terrain: {
-          type: "raster-dem",
-          tiles: [
-            "https://api.maptiler.com/tiles/terrain-rgb/{z}/{x}/{y}.webp?key=HuOH81AfcUjWmWWWJ8Yn"
-          ],
-          tileSize: 256,
-          maxzoom: 14
-        }
-      },
-      layers: [
-        {
-          id: "esri_sat",
-          type: "raster",
-          source: "esri_sat",
-          minzoom: 0,
-          maxzoom: 22
-        }
-      ]
-    },
-    center: [142.503768, -3.679434],
-    zoom: 15,
+    style: 'https://api.maptiler.com/maps/hybrid/style.json?key=HuOH81AfcUjWmWVWJ8Yn',
+    center: [142.503768133, -3.679434133],
+    zoom: 14,
     pitch: 60,
     bearing: 90,
     antialias: true
   });
 
-  let routeData = [], marker = null, player = null;
-
-  const vehicle = document.createElement('div');
-  vehicle.className = 'vehicle-icon';
-  marker = new maplibregl.Marker({ element: vehicle }).setLngLat([142.503768, -3.679434]).addTo(map);
-
   map.on('load', () => {
-    map.setTerrain({ source: "terrain", exaggeration: 5.0 });
+    // Add terrain
+    map.addSource('terrain', {
+      type: 'raster-dem',
+      url: 'https://api.maptiler.com/tiles/terrain-rgb/tiles.json?key=HuOH81AfcUjWmWVWJ8Yn',
+      tileSize: 256,
+      maxzoom: 14
+    });
 
+    map.setTerrain({ source: 'terrain', exaggeration: 2.8 });
+
+    map.addLayer({
+      id: 'sky',
+      type: 'sky',
+      paint: {
+        'sky-type': 'atmosphere',
+        'sky-atmosphere-sun': [0.0, 0.0],
+        'sky-atmosphere-sun-intensity': 15
+      }
+    });
+
+    // Add trail line
     map.addSource('trail', {
       type: 'geojson',
       data: {
-        type: 'Feature',
-        geometry: { type: 'LineString', coordinates: [] }
+        type: 'FeatureCollection',
+        features: []
       }
     });
 
@@ -106,60 +87,89 @@
       source: 'trail',
       paint: {
         'line-color': '#ff0000',
-        'line-width': 3
+        'line-width': 4
       }
     });
 
+    // Load GeoJSON route
     fetch('yiminum_wilbowe_timestamped.geojson')
       .then(res => res.json())
       .then(data => {
-        routeData = data.features;
-        setInterval(syncToVideo, 1000);
+        geoData = data.features;
+        initMarker();
+        setInterval(syncWithVideo, 1000);
       });
   });
+
+  function initMarker() {
+    let el = document.createElement('div');
+    el.style.width = '30px';
+    el.style.height = '30px';
+    el.style.backgroundImage = "url('https://cdn-icons-png.flaticon.com/512/744/744465.png')";
+    el.style.backgroundSize = 'contain';
+    el.style.backgroundRepeat = 'no-repeat';
+    el.style.transform = 'rotate(90deg)';
+
+    marker = new maplibregl.Marker(el)
+      .setLngLat([142.503768133, -3.679434133])
+      .addTo(map);
+  }
 
   function onYouTubeIframeAPIReady() {
     player = new YT.Player('ytplayer');
   }
 
-  function syncToVideo() {
-    if (!player || routeData.length === 0) return;
+  function syncWithVideo() {
+    if (!player || geoData.length === 0 || typeof player.getCurrentTime !== 'function') return;
 
     const time = player.getCurrentTime();
-    const points = routeData.filter(f => f.properties.timestamp_sec !== undefined);
-    const closest = points.reduce((prev, curr) => {
+    const points = geoData.filter(f => f.properties.timestamp_sec !== undefined);
+    if (points.length === 0) return;
+
+    let closest = points.reduce((prev, curr) => {
       return Math.abs(curr.properties.timestamp_sec - time) < Math.abs(prev.properties.timestamp_sec - time)
         ? curr : prev;
     });
 
-    const matchedIndex = points.indexOf(closest);
-    if (matchedIndex < 0) return;
+    let index = points.indexOf(closest);
+    if (index < 0) return;
 
-    const [lon, lat] = closest.geometry.coordinates;
+    let [lon, lat] = closest.geometry.coordinates;
     marker.setLngLat([lon, lat]);
-    map.easeTo({ center: [lon, lat], duration: 500 });
 
-    if (matchedIndex < points.length - 1) {
-      const [lon1, lat1] = closest.geometry.coordinates;
-      const [lon2, lat2] = points[matchedIndex + 1].geometry.coordinates;
-      const angleRad = Math.atan2(lat2 - lat1, lon2 - lon1);
-      const angleDeg = angleRad * (180 / Math.PI);
-      vehicle.style.transform = `rotate(${angleDeg - 90}deg)`;  // reversed for correct orientation
+    // Rotate vehicle
+    if (index < points.length - 1) {
+      let [lon1, lat1] = closest.geometry.coordinates;
+      let [lon2, lat2] = points[index + 1].geometry.coordinates;
+      let angle = Math.atan2(lat2 - lat1, lon2 - lon1) * 180 / Math.PI;
+      marker.getElement().style.transform = `rotate(${angle}deg)`;
     }
 
-    const coords = points.slice(0, matchedIndex + 1).map(f => f.geometry.coordinates);
+    // Add to trail
+    let trailCoords = points.slice(0, index + 1).map(f => f.geometry.coordinates);
     map.getSource('trail').setData({
       type: 'Feature',
       geometry: {
         type: 'LineString',
-        coordinates: coords
+        coordinates: trailCoords
       }
     });
 
-    const dist = closest.properties.cum_distance_km || 0;
+    // Follow camera
+    map.flyTo({
+      center: [lon, lat],
+      zoom: 17,
+      bearing: 90,
+      pitch: 60,
+      speed: 0.7,
+      curve: 1.2,
+      essential: true
+    });
+
+    // Update distance
+    let dist = closest.properties.cum_distance_km;
     document.getElementById('dist').innerText = dist.toFixed(2);
   }
 </script>
-
 </body>
 </html>
