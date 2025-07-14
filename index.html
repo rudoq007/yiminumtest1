@@ -4,8 +4,7 @@
   <title>Yiminum–Wilbowe Road (3D Terrain)</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
-  <script src="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.js">  map.addControl(new maplibregl.NavigationControl({ showCompass: true }), 'top-right');
-</script>
+  <script src="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.js"></script>
   <link href="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.css" rel="stylesheet" />
   <style>
     body { margin: 0; font-family: sans-serif; }
@@ -21,18 +20,7 @@
       font-size: 13px;
       z-index: 1;
     }
-  #layerControl {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  z-index: 2;
-  background: white;
-  padding: 6px;
-  border-radius: 4px;
-  box-shadow: 0 0 4px rgba(0,0,0,0.2);
-  font-size: 13px;
-}
-</style>
+  </style>
 </head>
 <body>
 
@@ -45,30 +33,16 @@
   </iframe>
 </div>
 
-<div id="layerControl">
-  <label><input type="radio" name="basemap" value="hybrid" checked> Hybrid</label><br>
-  <label><input type="radio" name="basemap" value="streets"> Streets</label><br>
-  $1<br>
-  <label><input type="radio" name="basemap" value="osm"> OSM</label>
-</div>
 <div id="map"></div>
 <div id="infoBox">Distance Travelled: <span id="dist">0.00</span> km</div>
 
 <script src="https://www.youtube.com/iframe_api"></script>
 <script>
   let map, player, geoData = [], marker, trailLine;
-  let started = false;
 
-  let styleUrls = {
-  osm: 'https://demotiles.maplibre.org/style.json',
-  hybrid: 'https://api.maptiler.com/maps/hybrid/style.json?key=HuOH81AfcUjWmWVWJ8Yn',
-  streets: 'https://api.maptiler.com/maps/streets/style.json?key=HuOH81AfcUjWmWVWJ8Yn',
-  satellite: 'https://api.maptiler.com/maps/satellite/style.json?key=HuOH81AfcUjWmWVWJ8Yn'
-};
-
-map = new maplibregl.Map({
-  container: 'map',
-  style: styleUrls.hybrid,
+  map = new maplibregl.Map({
+    container: 'map',
+    style: 'https://api.maptiler.com/maps/satellite/style.json?key=HuOH81AfcUjWmWVWJ8Yn',
     center: [142.503768133, -3.679434133],
     zoom: 13,
     pitch: 60,
@@ -76,56 +50,19 @@ map = new maplibregl.Map({
     antialias: true
   });
 
-  document.querySelectorAll('input[name="basemap"]').forEach(radio => {
-  radio.addEventListener('change', e => {
-    const selectedStyle = e.target.value;
-    map.setStyle(styleUrls[selectedStyle]);
-    map.once('style.load', () => {
-      map.setTerrain({ source: 'terrain', exaggeration: 1.2 });
-      map.addLayer({
-        id: 'sky',
-        type: 'sky',
-        paint: {
-          'sky-type': 'atmosphere',
-          'sky-atmosphere-sun': [0.0, 0.0],
-          'sky-atmosphere-sun-intensity': 15
-        }
-      });
-      map.addSource('trail', {
-        type: 'geojson',
-        data: {
-          type: 'FeatureCollection',
-          features: []
-        }
-      });
-      map.addLayer({
-        id: 'trail-line',
-        type: 'line',
-        source: 'trail',
-        paint: {
-          'line-color': '#ff0000',
-          'line-width': 4
-        }
-      });
-    });
-  });
-});
+  map.addControl(new maplibregl.NavigationControl({ showCompass: true }), 'top-right');
 
-map.on('load', () => {
-  // Load photo-rich points
-  map.loadImage('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Map_marker_icon_%E2%80%93_Nicolas_Mollet_%E2%80%93_Location_%E2%80%93_Tourism_%E2%80%93_Red.png/48px-Map_marker_icon_%E2%80%93_Nicolas_Mollet_%E2%80%93_Location_%E2%80%93_Tourism_%E2%80%93_Red.png', (error, image) => {
-    if (!error && !map.hasImage('photo-marker')) map.addImage('photo-marker', image);
-  });
-    // Add terrain
+  map.on('load', () => {
+    // Terrain
     map.addSource('terrain', {
       type: 'raster-dem',
       url: 'https://api.maptiler.com/tiles/terrain-rgb/tiles.json?key=HuOH81AfcUjWmWVWJ8Yn',
       tileSize: 256,
       maxzoom: 14
     });
-
     map.setTerrain({ source: 'terrain', exaggeration: 1.2 });
 
+    // Sky layer
     map.addLayer({
       id: 'sky',
       type: 'sky',
@@ -136,13 +73,10 @@ map.on('load', () => {
       }
     });
 
-    // Add trail line
+    // Red trail line
     map.addSource('trail', {
       type: 'geojson',
-      data: {
-        type: 'FeatureCollection',
-        features: []
-      }
+      data: { type: 'FeatureCollection', features: [] }
     });
 
     map.addLayer({
@@ -155,39 +89,44 @@ map.on('load', () => {
       }
     });
 
-    // Load GeoJSON route
+    // Load red marker image
+    map.loadImage('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Map_marker_icon_%E2%80%93_Nicolas_Mollet_%E2%80%93_Location_%E2%80%93_Tourism_%E2%80%93_Red.png/48px-Map_marker_icon_%E2%80%93_Nicolas_Mollet_%E2%80%93_Location_%E2%80%93_Tourism_%E2%80%93_Red.png',
+      (error, image) => {
+        if (!error && !map.hasImage('photo-marker')) {
+          map.addImage('photo-marker', image);
+        }
+
+        // Load popup features
+        fetch('yiminum_wilbowe_popups.geojson')
+          .then(res => res.json())
+          .then(data => {
+            map.addSource('popups', { type: 'geojson', data });
+            map.addLayer({
+              id: 'popup-points',
+              type: 'symbol',
+              source: 'popups',
+              layout: {
+                'icon-image': 'photo-marker',
+                'icon-size': 1,
+                'icon-allow-overlap': true
+              }
+            });
+
+            window.popupPoints = data.features.map(f => ({
+              ...f,
+              shown: false
+            }));
+          });
+      }
+    );
+
+    // Load route and start syncing
     fetch('yiminum_wilbowe_timestamped.geojson')
       .then(res => res.json())
       .then(data => {
         geoData = data.features;
         initMarker();
         setInterval(syncWithVideo, 1000);
-      });
-
-    fetch('yiminum_wilbowe_popups.geojson')
-      .then(res => res.json())
-      .then(data => {
-        map.addSource('popups', {
-          type: 'geojson',
-          data: data
-        });
-
-        map.addLayer({
-          id: 'popup-points',
-          type: 'symbol',
-          source: 'popups',
-          layout: {
-            'icon-image': 'photo-marker',
-            'icon-size': 1,
-            'icon-allow-overlap': true
-          }
-        });
-
-        window.popupPoints = data.features.map(f => ({
-          ...f,
-          shown: false
-        }));
-      });
       });
   });
 
@@ -198,7 +137,6 @@ map.on('load', () => {
     el.style.backgroundImage = "url('https://upload.wikimedia.org/wikipedia/commons/e/ec/RedDot.svg')";
     el.style.backgroundSize = 'contain';
     el.style.backgroundRepeat = 'no-repeat';
-    el.style.transform = 'none';
 
     marker = new maplibregl.Marker(el)
       .setLngLat([142.503768133, -3.679434133])
@@ -227,15 +165,7 @@ map.on('load', () => {
     let [lon, lat] = closest.geometry.coordinates;
     marker.setLngLat([lon, lat]);
 
-    // Rotate vehicle
-    if (index < points.length - 1) {
-      let [lon1, lat1] = closest.geometry.coordinates;
-      let [lon2, lat2] = points[index + 1].geometry.coordinates;
-      let angle = Math.atan2(lat2 - lat1, lon2 - lon1) * 180 / Math.PI;
-      // No rotation needed for red dot marker
-    }
-
-    // Add to trail
+    // Add to red trail
     let trailCoords = points.slice(0, index + 1).map(f => f.geometry.coordinates);
     map.getSource('trail').setData({
       type: 'Feature',
@@ -245,12 +175,12 @@ map.on('load', () => {
       }
     });
 
-    // Trigger popups nearby
+    // Auto-trigger photo popups
     window.popupPoints?.forEach(p => {
       if (!p.shown) {
         const dx = p.geometry.coordinates[0] - lon;
         const dy = p.geometry.coordinates[1] - lat;
-        const dist = Math.sqrt(dx * dx + dy * dy) * 111319; // deg to meters
+        const dist = Math.sqrt(dx * dx + dy * dy) * 111319; // meters
         if (dist < 25) {
           new maplibregl.Popup()
             .setLngLat(p.geometry.coordinates)
@@ -261,7 +191,7 @@ map.on('load', () => {
       }
     });
 
-    // Smooth follow camera
+    // Smooth camera follow
     map.easeTo({
       center: [lon, lat],
       zoom: 15,
@@ -271,9 +201,7 @@ map.on('load', () => {
       easing: t => t
     });
 
-    // Update distance
-    let dist = closest.properties.cum_distance_km;
-    document.getElementById('dist').innerText = dist.toFixed(2);
+    document.getElementById('dist').innerText = closest.properties.cum_distance_km.toFixed(2);
   }
 </script>
 </body>
