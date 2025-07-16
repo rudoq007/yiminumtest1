@@ -6,6 +6,7 @@
   <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
   <script src="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.js"></script>
   <link href="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.css" rel="stylesheet" />
+  <script src="https://www.youtube.com/iframe_api"></script>
   <style>
     body { margin: 0; font-family: sans-serif; }
     #video { height: 45vh; width: 100%; border-bottom: 2px solid #ccc; }
@@ -36,72 +37,78 @@
 <div id="map"></div>
 <div id="infoBox">Distance Travelled: <span id="dist">0.00</span> km</div>
 
-<script src="https://www.youtube.com/iframe_api"></script>
 <script>
-  let map, player, geoData = [], marker;
-  let activePopup = null;
+let map, player, geoData = [], marker, trailLine, activePopup;
+let started = false;
 
-  map = new maplibregl.Map({
-    container: 'map',
-    style: 'https://api.maptiler.com/maps/satellite/style.json?key=HuOH81AfcUjWmWVWJ8Yn',
-    center: [142.503768133, -3.679434133],
-    zoom: 13,
-    pitch: 60,
-    bearing: 90,
-    antialias: true
+map = new maplibregl.Map({
+  container: 'map',
+  style: 'https://api.maptiler.com/maps/satellite/style.json?key=HuOH81AfcUjWmWVWJ8Yn',
+  center: [142.503768133, -3.679434133],
+  zoom: 13,
+  pitch: 60,
+  bearing: 90,
+  antialias: true
+});
+
+map.on('load', () => {
+  map.addSource('terrain', {
+    type: 'raster-dem',
+    url: 'https://api.maptiler.com/tiles/terrain-rgb/tiles.json?key=HuOH81AfcUjWmWVWJ8Yn',
+    tileSize: 256,
+    maxzoom: 14
   });
 
-  map.addControl(new maplibregl.NavigationControl({ showCompass: true }), 'top-right');
+  map.setTerrain({ source: 'terrain', exaggeration: 1.2 });
 
-  map.on('load', () => {
-    // Terrain and Sky
-    map.addSource('terrain', {
-      type: 'raster-dem',
-      url: 'https://api.maptiler.com/tiles/terrain-rgb/tiles.json?key=HuOH81AfcUjWmWVWJ8Yn',
-      tileSize: 256,
-      maxzoom: 14
+  map.addLayer({
+    id: 'sky',
+    type: 'sky',
+    paint: {
+      'sky-type': 'atmosphere',
+      'sky-atmosphere-sun': [0.0, 0.0],
+      'sky-atmosphere-sun-intensity': 15
+    }
+  });
+
+  map.addSource('trail', {
+    type: 'geojson',
+    data: {
+      type: 'FeatureCollection',
+      features: []
+    }
+  });
+
+  map.addLayer({
+    id: 'trail-line',
+    type: 'line',
+    source: 'trail',
+    paint: {
+      'line-color': '#ff0000',
+      'line-width': 4
+    }
+  });
+
+  fetch('yiminum_wilbowe_timestamped.geojson')
+    .then(res => res.json())
+    .then(data => {
+      geoData = data.features;
+      initMarker();
+      setInterval(syncWithVideo, 1000);
     });
 
-    map.setTerrain({ source: 'terrain', exaggeration: 1.2 });
+  fetch('yiminum_popups_clean.geojson')
+    .then(res => res.json())
+    .then(data => {
+      map.addSource('popups', {
+        type: 'geojson',
+        data: data
+      });
 
-    map.addLayer({
-      id: 'sky',
-      type: 'sky',
-      paint: {
-        'sky-type': 'atmosphere',
-        'sky-atmosphere-sun': [0.0, 0.0],
-        'sky-atmosphere-sun-intensity': 15
-      }
-    });
-
-    // Trail source and red line
-    map.addSource('trail', {
-      type: 'geojson',
-      data: { type: 'FeatureCollection', features: [] }
-    });
-
-    map.addLayer({
-      id: 'trail-line',
-      type: 'line',
-      source: 'trail',
-      paint: {
-        'line-color': '#ff0000',
-        'line-width': 4
-      }
-    });
-
-    // Load image marker for photo points
-    map.loadImage('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Map_marker_icon_%E2%80%93_Nicolas_Mollet_%E2%80%93_Location_%E2%80%93_Tourism_%E2%80%93_Red.png/48px-Map_marker_icon_%E2%80%93_Nicolas_Mollet_%E2%80%93_Location_%E2%80%93_Tourism_%E2%80%93_Red.png',
-      (error, image) => {
-        if (!error && !map.hasImage('photo-marker')) {
-          map.addImage('photo-marker', image);
-        }
-
-        // Load photo-rich popup points
-        fetch('yiminum_wilbowe_popups.geojson')
-          .then(res => res.json())
-          .then(data => {
-            map.addSource('popups', { type: 'geojson', data });
+      map.loadImage('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Map_marker_icon_%E2%80%93_Nicolas_Mollet_%E2%80%93_Location_%E2%80%93_Tourism_%E2%80%93_Red.png/48px-Map_marker_icon_%E2%80%93_Nicolas_Mollet_%E2%80%93_Location_%E2%80%93_Tourism_%E2%80%93_Red.png',
+        (error, image) => {
+          if (!error && !map.hasImage('photo-marker')) {
+            map.addImage('photo-marker', image);
             map.addLayer({
               id: 'popup-points',
               type: 'symbol',
@@ -112,101 +119,91 @@
                 'icon-allow-overlap': true
               }
             });
+          }
+        });
 
-            window.popupPoints = data.features.map(f => ({
-              ...f,
-              shown: false
-            }));
-          });
-      }
-    );
+      window.popupPoints = data.features.map(f => ({
+        ...f,
+        shown: false
+      }));
+    });
+});
 
-    // Load route
-    fetch('yiminum_wilbowe_timestamped.geojson')
-      .then(res => res.json())
-      .then(data => {
-        geoData = data.features;
-        initMarker();
-        setInterval(syncWithVideo, 1000);
-      });
+function initMarker() {
+  let el = document.createElement('div');
+  el.style.width = '30px';
+  el.style.height = '30px';
+  el.style.backgroundImage = "url('https://upload.wikimedia.org/wikipedia/commons/e/ec/RedDot.svg')";
+  el.style.backgroundSize = 'contain';
+  el.style.backgroundRepeat = 'no-repeat';
+  el.style.transform = 'none';
+
+  marker = new maplibregl.Marker(el)
+    .setLngLat([142.503768133, -3.679434133])
+    .addTo(map);
+}
+
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('ytplayer');
+}
+
+function syncWithVideo() {
+  if (!player || geoData.length === 0 || typeof player.getCurrentTime !== 'function') return;
+
+  const time = player.getCurrentTime();
+  const points = geoData.filter(f => f.properties.timestamp_sec !== undefined);
+  if (points.length === 0) return;
+
+  let closest = points.reduce((prev, curr) => {
+    return Math.abs(curr.properties.timestamp_sec - time) < Math.abs(prev.properties.timestamp_sec - time)
+      ? curr : prev;
   });
 
-  function initMarker() {
-    let el = document.createElement('div');
-    el.style.width = '30px';
-    el.style.height = '30px';
-    el.style.backgroundImage = "url('https://upload.wikimedia.org/wikipedia/commons/e/ec/RedDot.svg')";
-    el.style.backgroundSize = 'contain';
-    el.style.backgroundRepeat = 'no-repeat';
+  let index = points.indexOf(closest);
+  if (index < 0) return;
 
-    marker = new maplibregl.Marker(el)
-      .setLngLat([142.503768133, -3.679434133])
-      .addTo(map);
-  }
+  let [lon, lat] = closest.geometry.coordinates;
+  marker.setLngLat([lon, lat]);
 
-  function onYouTubeIframeAPIReady() {
-    player = new YT.Player('ytplayer');
-  }
-
-  function syncWithVideo() {
-    if (!player || geoData.length === 0 || typeof player.getCurrentTime !== 'function') return;
-
-    const time = player.getCurrentTime();
-    const points = geoData.filter(f => f.properties.timestamp_sec !== undefined);
-    if (points.length === 0) return;
-
-    let closest = points.reduce((prev, curr) => {
-      return Math.abs(curr.properties.timestamp_sec - time) < Math.abs(prev.properties.timestamp_sec - time)
-        ? curr : prev;
-    });
-
-    let index = points.indexOf(closest);
-    if (index < 0) return;
-
-    let [lon, lat] = closest.geometry.coordinates;
-    marker.setLngLat([lon, lat]);
-
-    // Draw trail
-    let trailCoords = points.slice(0, index + 1).map(f => f.geometry.coordinates);
-    map.getSource('trail').setData({
-      type: 'Feature',
-      geometry: {
-        type: 'LineString',
-        coordinates: trailCoords
-      }
-    });
-
-    // Auto-popup for feature points only
-    if (window.popupPoints) {
-      window.popupPoints.forEach(p => {
-        if (!p.shown) {
-          const dx = p.geometry.coordinates[0] - lon;
-          const dy = p.geometry.coordinates[1] - lat;
-          const dist = Math.sqrt(dx * dx + dy * dy) * 111319; // meters
-          if (dist < 25) {
-            if (activePopup) activePopup.remove(); // Close previous
-            activePopup = new maplibregl.Popup()
-              .setLngLat(p.geometry.coordinates)
-              .setHTML(`<strong>${p.properties.name}</strong><br>${p.properties.description}`)
-              .addTo(map);
-            p.shown = true;
-          }
-        }
-      });
+  // Draw trail line
+  let trailCoords = points.slice(0, index + 1).map(f => f.geometry.coordinates);
+  map.getSource('trail').setData({
+    type: 'Feature',
+    geometry: {
+      type: 'LineString',
+      coordinates: trailCoords
     }
+  });
 
-    // Smooth follow camera
-    map.easeTo({
-      center: [lon, lat],
-      zoom: 15,
-      bearing: 90,
-      pitch: 60,
-      duration: 1000,
-      easing: t => t
-    });
+  // Trigger popups for photo points only
+  window.popupPoints?.forEach(p => {
+    if (!p.shown) {
+      const dx = p.geometry.coordinates[0] - lon;
+      const dy = p.geometry.coordinates[1] - lat;
+      const dist = Math.sqrt(dx * dx + dy * dy) * 111319; // meters
+      if (dist < 25) {
+        if (activePopup) activePopup.remove();
+        let img = p.properties.image ? `<br><img src="files/${p.properties.image}" width="200">` : '';
+        activePopup = new maplibregl.Popup()
+          .setLngLat(p.geometry.coordinates)
+          .setHTML(`<strong>${p.properties.name}</strong><br>${p.properties.description || ''}${img}`)
+          .addTo(map);
+        p.shown = true;
+      }
+    }
+  });
 
-    document.getElementById('dist').innerText = closest.properties.cum_distance_km.toFixed(2);
-  }
+  map.easeTo({
+    center: [lon, lat],
+    zoom: 15,
+    bearing: 90,
+    pitch: 60,
+    duration: 1000,
+    easing: t => t
+  });
+
+  document.getElementById('dist').innerText = closest.properties.cum_distance_km.toFixed(2);
+}
 </script>
 </body>
 </html>
