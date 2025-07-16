@@ -1,0 +1,1205 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.506328333,
+          -3.681015
+        ]
+      },
+      "properties": {
+        "name": "Problem Areas 4",
+        "description": " <h4>Layer: Problem Areas</h4><h4>Feature ID: a993e084-eb0e-4497-aa63-7f26a6562ed9</h4><p>Remarks: Land slide on both side of the road which narrow the road</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Problem Type</td><td>Landslide</td></tr> <tr><td>Length (m)</td><td>50</td></tr> <tr><td>Intervention Required</td><td>The land slide on both side of the road towards the edge of the road which narrow the road therefore a gabion Basket is propose.</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_170142898.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>Photo shows the land slide area which bush grow and cover the land slide ground</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_170158120.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>Photo shows the narrow road</td></tr></table>",
+        "folder": "Problem Areas"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.505605,
+          -3.684828333
+        ]
+      },
+      "properties": {
+        "name": "Problem Areas 8",
+        "description": " <h4>Layer: Problem Areas</h4><h4>Feature ID: a8b02f51-2a32-4fd0-84d7-20d88276d973</h4><p>Remarks: Need clearance and Gabion Basket works</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Problem Type</td><td>Landslide</td></tr> <tr><td>Length (m)</td><td>100</td></tr> <tr><td>Intervention Required</td><td>The land slide is towards the edge of the side therefore a gabion Basket is propose.</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_171234641.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>photo shows the land slide area.</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_171252061.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>photo shows the land slide area which grass growing and cover the land slide area.</td></tr></table>",
+        "folder": "Problem Areas"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.505123333,
+          -3.699335
+        ]
+      },
+      "properties": {
+        "name": "Problem Areas 18",
+        "description": " <h4>Layer: Problem Areas</h4><h4>Feature ID: 9720c1cd-cd2f-4e8f-9d70-9e084a78ff0d</h4><p>Remarks: Wilwil 1 Section\nland slide area</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Problem Type</td><td>Landslide</td></tr> <tr><td>Length (m)</td><td>50</td></tr> <tr><td>Intervention Required</td><td>need clearance and Gabion Basket works</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_174115370.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>bush grow and cover the Land slide area at Wilwil section</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_174140957.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>photo shows the land slide area</td></tr></table>",
+        "folder": "Problem Areas"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.50575,
+          -3.708061667
+        ]
+      },
+      "properties": {
+        "name": "Problem Areas 23",
+        "description": " <h4>Layer: Problem Areas</h4><h4>Feature ID: d192ffba-9eb6-4cce-a2c4-0250fb5ffe77</h4><p>Remarks: need clearance and Gabion Basket works at RHS</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Problem Type</td><td>Landslide</td></tr> <tr><td>Length (m)</td><td>50</td></tr> <tr><td>Intervention Required</td><td>The land slide on RHS need clearing and proper Drainage or side slope drain on RHS</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_175330258.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>Photo shows the land slide area.</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_175343582.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>Photo shows the land slide area.</td></tr></table>",
+        "folder": "Problem Areas"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.504398333,
+          -3.712016667
+        ]
+      },
+      "properties": {
+        "name": "Problem Areas 25",
+        "description": " <h4>Layer: Problem Areas</h4><h4>Feature ID: 66c1545c-8501-48e9-af3e-77bbec80195c</h4><p>Remarks: Waterlogging area which accumulate ftom the raining water from both side of hill.</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Problem Type</td><td>Waterlogging</td></tr> <tr><td>Length (m)</td><td>50</td></tr> <tr><td>Intervention Required</td><td>The water log area which need proper Drainage or side slope drain and an relief Culvert.</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_175808199.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>water log section\nwilwil section</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_175826977.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>photo shows the water log area</td></tr></table>",
+        "folder": "Problem Areas"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.503498333,
+          -3.713153333
+        ]
+      },
+      "properties": {
+        "name": "Problem Areas 26",
+        "description": " <h4>Layer: Problem Areas</h4><h4>Feature ID: 0dd7cad4-57ef-4495-9486-d3a50a223d5f</h4><p>Remarks: land slide at LHS</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Problem Type</td><td>Landslide</td></tr> <tr><td>Length (m)</td><td>50</td></tr> <tr><td>Intervention Required</td><td>Land slide is towards the edge of the road therefore a gabion Basket is propose.</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_180023477.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>Photo shows the land slide area</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_180040195.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>Photo shows the land slide area</td></tr></table>",
+        "folder": "Problem Areas"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.508016667,
+          -3.727615
+        ]
+      },
+      "properties": {
+        "name": "Problem Areas 35",
+        "description": " <h4>Layer: Problem Areas</h4><h4>Feature ID: 68bfbcf0-b4eb-427e-a188-1d357a951f4d</h4><p>Remarks: water log area\nneed to install a Culvert</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Problem Type</td><td>Waterlogging</td></tr> <tr><td>Length (m)</td><td>100</td></tr> <tr><td>Intervention Required</td><td>Waterlogging area from both side hill accumulate here. Hence proper Drainage or side slope drain with a Culvert is propose on this location</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_183309046.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>wilwil Section\nphoto shows the road condition</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_183336003.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>Photo shows the Waterlogging area</td></tr></table>",
+        "folder": "Problem Areas"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.50458,
+          -3.736183333
+        ]
+      },
+      "properties": {
+        "name": "Problem Areas 39",
+        "description": " <h4>Layer: Problem Areas</h4><h4>Feature ID: 89e3418e-7136-4c7b-8190-80ae6c2c8c2b</h4><p>Remarks: Earthen Surface wash out</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Problem Type</td><td>Erosion</td></tr> <tr><td>Length (m)</td><td>500</td></tr> <tr><td>Intervention Required</td><td>The surface wash out because of no proper Drainage or side slope drain. Therefore, the road condition need regravelling, side slope drain and clearing Grabbing.</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_184407195.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>Earthen Surface wash out \nKapul mountain section</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_184416801.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>The photo shows the road condition</td></tr></table>",
+        "folder": "Problem Areas"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.504386667,
+          -3.747328333
+        ]
+      },
+      "properties": {
+        "name": "Problem Areas 47",
+        "description": " <h4>Layer: Problem Areas</h4><h4>Feature ID: 03b5971a-7f80-4e0a-ae5c-db4ca839a5a7</h4><p>Remarks: Earthen Surface wash out\nneed clearance and gravelling</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Problem Type</td><td>Erosion</td></tr> <tr><td>Length (m)</td><td>500</td></tr> <tr><td>Intervention Required</td><td>The road condition is poor hence it needs clearing Grabbing, regravelling and proper Drainage or side slope drain.</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_084459496.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>road way wash out\nat Kapul section</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_084517632.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>The photo shows the road condition</td></tr></table>",
+        "folder": "Problem Areas"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.503215,
+          -3.750973333
+        ]
+      },
+      "properties": {
+        "name": "Problem Areas 48",
+        "description": " <h4>Layer: Problem Areas</h4><h4>Feature ID: 06364f25-2ba3-4939-a74a-7ec685009a71</h4><p>Remarks: Water log section</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Problem Type</td><td>Waterlogging</td></tr> <tr><td>Length (m)</td><td>200</td></tr> <tr><td>Intervention Required</td><td>The Waterlogging area need gravelling surface, side slope drain or proper Drainage on both side and clearing Grabbing.</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_084952465.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>Krukru water log area</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_085016815.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>The Photo shows the road condition</td></tr></table>",
+        "folder": "Problem Areas"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.498858333,
+          -3.762588333
+        ]
+      },
+      "properties": {
+        "name": "Problem Areas 54",
+        "description": " <h4>Layer: Problem Areas</h4><h4>Feature ID: 89fd3903-d415-487d-914a-16909b952de4</h4><p>Remarks: Wombol section\nearthen Surface wash out\nneed clearance and gravelling</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Problem Type</td><td>Erosion</td></tr> <tr><td>Length (m)</td><td>500</td></tr> <tr><td>Intervention Required</td><td>The Earthen surface wash out because of no proper Drainage or side slope drain. Hence this section require heavy maintenance work such as clearing Grabbing, side slope drain on both side and gravelling surface.</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_091504655.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>Photo shows the road condition</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_091515149.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>Photo shows the road</td></tr></table>",
+        "folder": "Problem Areas"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.498671667,
+          -3.762791667
+        ]
+      },
+      "properties": {
+        "name": "Problem Areas 55",
+        "description": " <h4>Layer: Problem Areas</h4><h4>Feature ID: b2d519f4-cccc-4156-8e0c-ac201c16bc3e</h4><p>Remarks: Wombol section\nwater log area need clearance and gravelling</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Problem Type</td><td>Waterlogging</td></tr> <tr><td>Length (m)</td><td>200</td></tr> <tr><td>Intervention Required</td><td>Waterlogging area which require heavy maintenance work Filling with Boulder, gravelling surface and proper Drainage or side slope drain</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_091647685.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>wombol section\nphoto shows the road condition</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_091721513.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>Photo shows the road condition</td></tr></table>",
+        "folder": "Problem Areas"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.496656667,
+          -3.763901667
+        ]
+      },
+      "properties": {
+        "name": "Problem Areas 56",
+        "description": " <h4>Layer: Problem Areas</h4><h4>Feature ID: fa687794-1c51-423e-a642-9c469b858e2a</h4><p>Remarks: wombol section\nwater log area continuous\nneed clearance and gravelling</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Problem Type</td><td>Waterlogging</td></tr> <tr><td>Length (m)</td><td>500</td></tr> <tr><td>Intervention Required</td><td>need clearance and gravelling</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_092002901.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td></td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_092018931.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td></td></tr></table>",
+        "folder": "Problem Areas"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.495451667,
+          -3.765376667
+        ]
+      },
+      "properties": {
+        "name": "Problem Areas 58",
+        "description": " <h4>Layer: Problem Areas</h4><h4>Feature ID: 1885bc50-d20d-4fba-9c28-301b60731ba7</h4><p>Remarks: Earthen Surface wash out\nneed gravelling</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Problem Type</td><td>Erosion</td></tr> <tr><td>Length (m)</td><td>500</td></tr> <tr><td>Intervention Required</td><td>The Earthen Surface wash out makeing road condition very poor which require heavy maintenance work. propose gravelling on the surface and proper Drainage or side slope drain on both.</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_092422177.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>herin section\nThe photo shows the road condition</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_092449502.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>The Photo shows the road condition</td></tr></table>",
+        "folder": "Problem Areas"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.503785,
+          -3.786806667
+        ]
+      },
+      "properties": {
+        "name": "Problem Areas 63",
+        "description": " <h4>Layer: Problem Areas</h4><h4>Feature ID: f1197f0b-3bf4-46e6-a38f-312ca3a279b5</h4><p>Remarks: Tugunaro section\nThe Earthen Surface is wash out.</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Problem Type</td><td>Erosion</td></tr> <tr><td>Length (m)</td><td>200</td></tr> <tr><td>Intervention Required</td><td>The Earthen Surface is wash bout because of no proper Drainage or side slope drain. Hence proper Drainage or side slope drain on both side with gravelling surface is propose.</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_095700629.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>Photo shows the road condition</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_095813433.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>Photo shows the road condition</td></tr></table>",
+        "folder": "Problem Areas"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.503991667,
+          -3.787503333
+        ]
+      },
+      "properties": {
+        "name": "Problem Areas 66",
+        "description": " <h4>Layer: Problem Areas</h4><h4>Feature ID: 207dcc6c-d6d5-426a-aa11-67c1a5343290</h4><p>Remarks: need Gabion Basket works</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Problem Type</td><td>Landslide</td></tr> <tr><td>Length (m)</td><td>50</td></tr> <tr><td>Intervention Required</td><td>The land slide area towards the edge of the road  which narrow the road width. Therefore a gabion Basket is propose</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_100458283.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>The photo shows the land slide area and road width.</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_100511053.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>Photo shows the road condition</td></tr></table>",
+        "folder": "Problem Areas"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.506181136,
+          -3.794122348
+        ]
+      },
+      "properties": {
+        "name": "Problem Areas 70",
+        "description": " <h4>Layer: Problem Areas</h4><h4>Feature ID: d17d8501-4836-4713-9766-208a7ec689c0</h4><p>Remarks: Both side of the road is land slide which narrow the road. Hence Gabion Basket is propose on both side</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Problem Type</td><td>Landslide</td></tr> <tr><td>Length (m)</td><td>50</td></tr> <tr><td>Intervention Required</td><td>Both side of the road is land slide which narrow the road. Hence Gabion Basket is propose on both side</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_101908608.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>Photo shows the land slide area on LHS</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_101929845.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>Photo shows the land slide area on RHS</td></tr></table>",
+        "folder": "Problem Areas"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.507203333,
+          -3.798023333
+        ]
+      },
+      "properties": {
+        "name": "Problem Areas 71",
+        "description": " <h4>Layer: Problem Areas</h4><h4>Feature ID: dc6e7def-0be4-49c4-89a7-875d461f0528</h4><p>Remarks: water log section\nneed gravelling and Installation of Culvert dia 900 length 9m</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Problem Type</td><td>Waterlogging</td></tr> <tr><td>Length (m)</td><td>200</td></tr> <tr><td>Intervention Required</td><td>The waterlogging area is cause by accumulate of water from both hill flowing down. Hence a relief Culvert of dia 900mm with a length of 10m is propose.</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_102430505.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>the photo shows the road condition</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_102449037.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>The photo shows the propose Culvert section</td></tr></table>",
+        "folder": "Problem Areas"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.505943333,
+          -3.799183333
+        ]
+      },
+      "properties": {
+        "name": "Problem Areas 72",
+        "description": " <h4>Layer: Problem Areas</h4><h4>Feature ID: af5f567c-80cc-4278-ab74-2d0a02b5525b</h4><p>Remarks: land slide and need gabion Basket works</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Problem Type</td><td>Landslide</td></tr> <tr><td>Length (m)</td><td>50</td></tr> <tr><td>Intervention Required</td><td>The land slide on RHS is towards the edge of the road therefore gabion Basket is propose.</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_102727295.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>photo shows the land slide area</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_102755605.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>Photo shows the land slide area</td></tr></table>",
+        "folder": "Problem Areas"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.504676667,
+          -3.809996667
+        ]
+      },
+      "properties": {
+        "name": "Problem Areas 75",
+        "description": " <h4>Layer: Problem Areas</h4><h4>Feature ID: e5d05299-27ce-4c96-a48e-9d662307a720</h4><p>Remarks: need gabion Basket works to for road widening</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Problem Type</td><td>Landslide</td></tr> <tr><td>Length (m)</td><td>45</td></tr> <tr><td>Intervention Required</td><td>need gabion Basket works</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_103825105.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td></td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_103857949.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td></td></tr></table>",
+        "folder": "Problem Areas"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.503820333,
+          -3.679395333
+        ]
+      },
+      "properties": {
+        "name": "Road Side Drain 2",
+        "description": " <h4>Layer: Road Side Drain</h4><h4>Feature ID: 42c01289-6adb-4bff-be26-75a4f1969a5f</h4><p>Remarks: Side slope drain on RHS</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Drain Side</td><td>Left Side</td></tr> <tr><td>Drain Type</td><td>Earthern</td></tr> <tr><td>Bottom Width (m)</td><td>0.5</td></tr> <tr><td>Top Width (m)</td><td>0.5</td></tr> <tr><td>Avg. Height (m)</td><td>0.5</td></tr> <tr><td>Avg. Wall Thickness (m)</td><td></td></tr> <tr><td>Drain Shape</td><td>Road Side Slopping</td></tr> <tr><td>Drain Cover</td><td>None</td></tr> <tr><td>Intervention Required</td><td>need proper Drainage or clearing of bush from side slope drain</td></tr> <tr><td>Update Notes</td><td>need clearance and proper Drainage</td></tr> <tr><td>Construction Year</td><td>2024</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_165423053.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>photo shows the side slope drain</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_165436616.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>Photo shows the side slope drain</td></tr></table>",
+        "folder": "Road Side Drain"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.50625,
+          -3.680866667
+        ]
+      },
+      "properties": {
+        "name": "Road Side Drain 3",
+        "description": " <h4>Layer: Road Side Drain</h4><h4>Feature ID: 4523046a-4af2-48d4-81fd-9112e93bf2db</h4><p>Remarks: Ditch Drain turn out</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Drain Side</td><td>Left Side</td></tr> <tr><td>Drain Type</td><td>Earthern</td></tr> <tr><td>Bottom Width (m)</td><td>0.5</td></tr> <tr><td>Top Width (m)</td><td>0.5</td></tr> <tr><td>Avg. Height (m)</td><td>0.5</td></tr> <tr><td>Avg. Wall Thickness (m)</td><td></td></tr> <tr><td>Drain Shape</td><td>Road Side Slopping</td></tr> <tr><td>Drain Cover</td><td>None</td></tr> <tr><td>Intervention Required</td><td>need clearance and proper Drainage</td></tr> <tr><td>Update Notes</td><td>need clearance and proper Drainage</td></tr> <tr><td>Construction Year</td><td>2024</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_165819337.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>photo shows the side slope drain on LHS</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_165831372.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>Photo shows the side slope drain</td></tr></table>",
+        "folder": "Road Side Drain"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.506321667,
+          -3.682775
+        ]
+      },
+      "properties": {
+        "name": "Road Side Drain 6",
+        "description": " <h4>Layer: Road Side Drain</h4><h4>Feature ID: 9691ebd4-e9e4-4ba7-bc1b-fe670029476a</h4><p>Remarks: Side slope drain on both side</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Drain Side</td><td>Both Sides</td></tr> <tr><td>Drain Type</td><td>Earthern</td></tr> <tr><td>Bottom Width (m)</td><td>0.3</td></tr> <tr><td>Top Width (m)</td><td>0.3</td></tr> <tr><td>Avg. Height (m)</td><td>0.3</td></tr> <tr><td>Avg. Wall Thickness (m)</td><td></td></tr> <tr><td>Drain Shape</td><td>Road Side Slopping</td></tr> <tr><td>Drain Cover</td><td>None</td></tr> <tr><td>Intervention Required</td><td>The side slope drain on both side need widening of with and increase depth. Hence proper type 3 Drainage is propose.</td></tr> <tr><td>Update Notes</td><td>need proper Drainage</td></tr> <tr><td>Construction Year</td><td>2024</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_170647551.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>Photo shows the side slope drain</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_170714724.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>Photo shows the side slope drain</td></tr></table>",
+        "folder": "Road Side Drain"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.505643333,
+          -3.68476
+        ]
+      },
+      "properties": {
+        "name": "Road Side Drain 7",
+        "description": " <h4>Layer: Road Side Drain</h4><h4>Feature ID: bd6b9231-5a05-4e17-8462-d4a0d325d2d0</h4><p>Remarks: ditch Drain works turn out</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Drain Side</td><td>Both Sides</td></tr> <tr><td>Drain Type</td><td>Earthern</td></tr> <tr><td>Bottom Width (m)</td><td>0.3</td></tr> <tr><td>Top Width (m)</td><td>0.3</td></tr> <tr><td>Avg. Height (m)</td><td>0.3</td></tr> <tr><td>Avg. Wall Thickness (m)</td><td></td></tr> <tr><td>Drain Shape</td><td>Road Side Slopping</td></tr> <tr><td>Drain Cover</td><td>None</td></tr> <tr><td>Intervention Required</td><td>The turn out of ditch drain on both side.</td></tr> <tr><td>Update Notes</td><td>need clearing on side slope drain or propose proper Type 3 drain</td></tr> <tr><td>Construction Year</td><td>2024</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_171055904.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>photo shows the side slope drain</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_171108578.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>photo shows the side slope drain</td></tr></table>",
+        "folder": "Road Side Drain"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.50596,
+          -3.691175
+        ]
+      },
+      "properties": {
+        "name": "Road Side Drain 12",
+        "description": " <h4>Layer: Road Side Drain</h4><h4>Feature ID: 9c5e0b98-7de5-4c5a-81f9-768f197e6d8e</h4><p>Remarks: Side Ditch Drain</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Drain Side</td><td>Right Side</td></tr> <tr><td>Drain Type</td><td>Earthern</td></tr> <tr><td>Bottom Width (m)</td><td>0.5</td></tr> <tr><td>Top Width (m)</td><td>0.5</td></tr> <tr><td>Avg. Height (m)</td><td>0.5</td></tr> <tr><td>Avg. Wall Thickness (m)</td><td></td></tr> <tr><td>Drain Shape</td><td>Road Side Slopping</td></tr> <tr><td>Drain Cover</td><td>None</td></tr> <tr><td>Intervention Required</td><td>Side slope drain on RHS need clearing . Hence proper Type 4 drain is propose.</td></tr> <tr><td>Update Notes</td><td>need proper Drainage</td></tr> <tr><td>Construction Year</td><td>2024</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_172507607.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>photo shows the side slope drain</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_172519044.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>photo shows the side slope drain</td></tr></table>",
+        "folder": "Road Side Drain"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.505906667,
+          -3.692266667
+        ]
+      },
+      "properties": {
+        "name": "Road Side Drain 13",
+        "description": " <h4>Layer: Road Side Drain</h4><h4>Feature ID: 0d309b57-7e9d-4bcb-8b81-61629d682cc3</h4><p>Remarks: Dide Ditch Drain</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Drain Side</td><td>Right Side</td></tr> <tr><td>Drain Type</td><td>Earthern</td></tr> <tr><td>Bottom Width (m)</td><td>0.5</td></tr> <tr><td>Top Width (m)</td><td>0.5</td></tr> <tr><td>Avg. Height (m)</td><td>0.5</td></tr> <tr><td>Avg. Wall Thickness (m)</td><td></td></tr> <tr><td>Drain Shape</td><td>Road Side Slopping</td></tr> <tr><td>Drain Cover</td><td>None</td></tr> <tr><td>Intervention Required</td><td>need clearance and proper Drainage</td></tr> <tr><td>Update Notes</td><td>need clearance and proper Drainage</td></tr> <tr><td>Construction Year</td><td>2024</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_172834461.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>Wilwil Ditch Drain</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_172846264.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>photo shows the side slope drain</td></tr></table>",
+        "folder": "Road Side Drain"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.505868333,
+          -3.6947
+        ]
+      },
+      "properties": {
+        "name": "Road Side Drain 16",
+        "description": " <h4>Layer: Road Side Drain</h4><h4>Feature ID: c2b4aa6b-e3e3-48ed-bdd2-1a0504c13385</h4><p>Remarks: Side ditch Drain</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Drain Side</td><td>Both Sides</td></tr> <tr><td>Drain Type</td><td>Earthern</td></tr> <tr><td>Bottom Width (m)</td><td>0.3</td></tr> <tr><td>Top Width (m)</td><td>0.3</td></tr> <tr><td>Avg. Height (m)</td><td>0.3</td></tr> <tr><td>Avg. Wall Thickness (m)</td><td></td></tr> <tr><td>Drain Shape</td><td>Road Side Slopping</td></tr> <tr><td>Drain Cover</td><td>None</td></tr> <tr><td>Intervention Required</td><td>need clearance and proper Drainage</td></tr> <tr><td>Update Notes</td><td>need clearance and proper Drainage</td></tr> <tr><td>Construction Year</td><td>2024</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_173601751.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>photo shows the side slope drain</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_173610592.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>photo shows the side slope drain</td></tr></table>",
+        "folder": "Road Side Drain"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.505165,
+          -3.699375
+        ]
+      },
+      "properties": {
+        "name": "Road Side Drain 17",
+        "description": " <h4>Layer: Road Side Drain</h4><h4>Feature ID: 8912e91e-7bb6-4f99-9be2-3a90438ac78f</h4><p>Remarks: wilwil 1 section\nSide Ditch Drain\nneed clearance and proper Drainage</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Drain Side</td><td>Both Sides</td></tr> <tr><td>Drain Type</td><td>Earthern</td></tr> <tr><td>Bottom Width (m)</td><td>0.3</td></tr> <tr><td>Top Width (m)</td><td>0.3</td></tr> <tr><td>Avg. Height (m)</td><td>0.3</td></tr> <tr><td>Avg. Wall Thickness (m)</td><td></td></tr> <tr><td>Drain Shape</td><td>Road Side Slopping</td></tr> <tr><td>Drain Cover</td><td>None</td></tr> <tr><td>Intervention Required</td><td>need clearance and proper Drainage</td></tr> <tr><td>Update Notes</td><td>need clearance and proper Drainage</td></tr> <tr><td>Construction Year</td><td>2024</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_173934826.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>photo shows the side slope drain</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_173954528.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>photo shows the side slope drain</td></tr></table>",
+        "folder": "Road Side Drain"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.505723333,
+          -3.703631667
+        ]
+      },
+      "properties": {
+        "name": "Road Side Drain 21",
+        "description": " <h4>Layer: Road Side Drain</h4><h4>Feature ID: a79d9aed-9a15-45ad-9dc4-5ec08d7201f1</h4><p>Remarks: Side Ditch Drain LHS</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Drain Side</td><td>Left Side</td></tr> <tr><td>Drain Type</td><td>Earthern</td></tr> <tr><td>Bottom Width (m)</td><td>0.3</td></tr> <tr><td>Top Width (m)</td><td>0.3</td></tr> <tr><td>Avg. Height (m)</td><td>0.3</td></tr> <tr><td>Avg. Wall Thickness (m)</td><td></td></tr> <tr><td>Drain Shape</td><td>Road Side Slopping</td></tr> <tr><td>Drain Cover</td><td>None</td></tr> <tr><td>Intervention Required</td><td>need clearance and proper Drainage</td></tr> <tr><td>Update Notes</td><td>need clearance and proper Drainage</td></tr> <tr><td>Construction Year</td><td>2024</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_174903270.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>photo shows the side slope drain</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_174915036.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>photo shows the side slope drain</td></tr></table>",
+        "folder": "Road Side Drain"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.505781667,
+          -3.70812
+        ]
+      },
+      "properties": {
+        "name": "Road Side Drain 22",
+        "description": " <h4>Layer: Road Side Drain</h4><h4>Feature ID: 54fe0ef2-4028-4ccb-a274-b142cd9e4657</h4><p>Remarks: Wilwil section\nneed clearance and proper Drainage</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Drain Side</td><td>Right Side</td></tr> <tr><td>Drain Type</td><td>Earthern</td></tr> <tr><td>Bottom Width (m)</td><td>0.3</td></tr> <tr><td>Top Width (m)</td><td>0.3</td></tr> <tr><td>Avg. Height (m)</td><td>0.3</td></tr> <tr><td>Avg. Wall Thickness (m)</td><td></td></tr> <tr><td>Drain Shape</td><td>Road Side Slopping</td></tr> <tr><td>Drain Cover</td><td>None</td></tr> <tr><td>Intervention Required</td><td>need clearance and proper Drainage</td></tr> <tr><td>Update Notes</td><td>need clearance and proper Drainage</td></tr> <tr><td>Construction Year</td><td>2024</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_175150720.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>photo shows the side slope drain</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_175208206.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>Photo shows the side slope drain</td></tr></table>",
+        "folder": "Road Side Drain"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.503658333,
+          -3.712993333
+        ]
+      },
+      "properties": {
+        "name": "Road Side Drain 27",
+        "description": " <h4>Layer: Road Side Drain</h4><h4>Feature ID: b137c202-2c9e-4e91-b895-179246735a10</h4><p>Remarks: side Ditch Drain</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Drain Side</td><td>Right Side</td></tr> <tr><td>Drain Type</td><td>Earthern</td></tr> <tr><td>Bottom Width (m)</td><td>0.3</td></tr> <tr><td>Top Width (m)</td><td>0.3</td></tr> <tr><td>Avg. Height (m)</td><td>0.3</td></tr> <tr><td>Avg. Wall Thickness (m)</td><td></td></tr> <tr><td>Drain Shape</td><td>Road Side Slopping</td></tr> <tr><td>Drain Cover</td><td>None</td></tr> <tr><td>Intervention Required</td><td>need clearance and proper Drainage</td></tr> <tr><td>Update Notes</td><td></td></tr> <tr><td>Construction Year</td><td>2024</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_180235174.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>Photo shows the side slope drain</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_180247643.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>Photo shows the side slope drain</td></tr></table>",
+        "folder": "Road Side Drain"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.506333333,
+          -3.682736667
+        ]
+      },
+      "properties": {
+        "name": "Road Condition 5",
+        "description": " <h4>Layer: Road Condition</h4><h4>Feature ID: c647faec-c476-40d7-9aaa-67a817d8d5b8</h4><p>Remarks: The road condition is good hence, propose clearing grass on side slope drain on both side or install proper Type 3 drain and gravelling subase and base course material.</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Condition</td><td>Good</td></tr> <tr><td>Notes</td><td>top up Subase and Base course and Construct line Drain works</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_170425560.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>photo shows the road condition</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_170442626.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>photo shows the road surface</td></tr></table>",
+        "folder": "Road Condition"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.505585,
+          -3.686986667
+        ]
+      },
+      "properties": {
+        "name": "Road Condition 9",
+        "description": " <h4>Layer: Road Condition</h4><h4>Feature ID: 62f634ca-c7c9-4353-86ce-ef0d72c7478b</h4><p>Remarks: Wilwil Section\ngravelling with Subgrade material</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Condition</td><td>Good</td></tr> <tr><td>Notes</td><td>need top of Subase and Base course material and line Drain works on both side</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_171539331.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>wilwil section</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_171555924.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td></td></tr></table>",
+        "folder": "Road Condition"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.50628,
+          -3.691166667
+        ]
+      },
+      "properties": {
+        "name": "Road Condition 10",
+        "description": " <h4>Layer: Road Condition</h4><h4>Feature ID: 2d6ab89d-77c2-4666-8dc3-52bc465ead4a</h4><p>Remarks: Wilwil Section\nneed topping up of Subase and Base course material</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Condition</td><td>Good</td></tr> <tr><td>Notes</td><td>Wilwil Section\nneed topping up of Subase and Base course material</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_171858913.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>Photo shows the road condition</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_171918469.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>Photo shows the road condition</td></tr></table>",
+        "folder": "Road Condition"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.505853333,
+          -3.694705
+        ]
+      },
+      "properties": {
+        "name": "Road Condition 15",
+        "description": " <h4>Layer: Road Condition</h4><h4>Feature ID: fee9f408-65f8-4521-9944-4f1e7ab4d825</h4><p>Remarks: Wilwil section\nneed topping up of Subase and Base course material</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Condition</td><td>Good</td></tr> <tr><td>Notes</td><td>Wilwil section\nneed topping up of Subase and Base course material</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_173319144.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>Wilwil section\nneed topping up of Subase and Base course material</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_173337550.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>photo shows the road condition</td></tr></table>",
+        "folder": "Road Condition"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.505143333,
+          -3.699331667
+        ]
+      },
+      "properties": {
+        "name": "Road Condition 19",
+        "description": " <h4>Layer: Road Condition</h4><h4>Feature ID: 8ab0d750-225f-4a67-a64e-3139571107e1</h4><p>Remarks: Proper Condition\nneed topping up of Subase and Base course material</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Condition</td><td>Good</td></tr> <tr><td>Notes</td><td>need topping up of Subase and base course material</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_174404305.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>photo shows the road condition</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_174419219.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>photo shows the road condition</td></tr></table>",
+        "folder": "Road Condition"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.505765,
+          -3.703628333
+        ]
+      },
+      "properties": {
+        "name": "Road Condition 20",
+        "description": " <h4>Layer: Road Condition</h4><h4>Feature ID: 91c65eed-a408-4ce4-ad2a-cdda694b448a</h4><p>Remarks: Need topping up of Subase and base course material</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Condition</td><td>Good</td></tr> <tr><td>Notes</td><td>Wilwil section 1 need topping up of Subase and base course material</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_174644289.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>wilwil section\nroad Surface Gravelling with Subgrade material</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_174703663.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>Photo shows the road condition</td></tr></table>",
+        "folder": "Road Condition"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.50577,
+          -3.708093333
+        ]
+      },
+      "properties": {
+        "name": "Road Condition 24",
+        "description": " <h4>Layer: Road Condition</h4><h4>Feature ID: 34063a0e-7356-4184-903c-ed655e8e21e5</h4><p>Remarks: gravelling Road Surface\nneed topping up of Subase and Base course material</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Condition</td><td>Good</td></tr> <tr><td>Notes</td><td>wilwil section\ngravelling road Surface\nneed topping up of Subase and base course material</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_175501412.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>Photo shows the road condition</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_175516833.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>Photo shows the road condition</td></tr></table>",
+        "folder": "Road Condition"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.503406667,
+          -3.716148333
+        ]
+      },
+      "properties": {
+        "name": "Road Condition 29",
+        "description": " <h4>Layer: Road Condition</h4><h4>Feature ID: 7df9368b-ef1f-472f-8520-76869e010a7f</h4><p>Remarks: need Clearing and Grabbing and proper Gravelling</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Condition</td><td>Fair</td></tr> <tr><td>Notes</td><td>The road condition is fair hence it needs clearing Grabbing, regravelling and proper Drainage or side slope drain.</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_181016692.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>wilwil section\nphoto shows the road condition</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_181026718.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>photo shows the road condition</td></tr></table>",
+        "folder": "Road Condition"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.503586667,
+          -3.718875
+        ]
+      },
+      "properties": {
+        "name": "Road Condition 31",
+        "description": " <h4>Layer: Road Condition</h4><h4>Feature ID: bb8593ea-10f1-4388-8551-2c05a9178eef</h4><p>Remarks: Wilwil Primary school section the road condition is Fair</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Condition</td><td>Fair</td></tr> <tr><td>Notes</td><td>The road condition is fair hence it needs clearing Grabbing, regravelling and proper Drainage or side slope drain.</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_181454500.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>wilwil primary school section need clearance and gravelling</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_181505997.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>photo shows the road condition</td></tr></table>",
+        "folder": "Road Condition"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.508011667,
+          -3.72757
+        ]
+      },
+      "properties": {
+        "name": "Road Condition 36",
+        "description": " <h4>Layer: Road Condition</h4><h4>Feature ID: 6358a70c-6f10-4961-a3b6-330a6365d9ab</h4><p>Remarks: wilwil section the road condition is fair. It need clearance and gravelling with line Drain works</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Condition</td><td>Fair</td></tr> <tr><td>Notes</td><td>The road condition is fair which propose gravelling surface, side slope drain or proper Drainage on both side slope drain</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_183457391.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>The photo shows the road condition</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_183510974.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>Photo shows the road condition</td></tr></table>",
+        "folder": "Road Condition"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.507445,
+          -3.7333
+        ]
+      },
+      "properties": {
+        "name": "Road Condition 37",
+        "description": " <h4>Layer: Road Condition</h4><h4>Feature ID: 0f761402-ec37-45f8-ba84-ba5695af3861</h4><p>Remarks: Earthen Surface road\nneed Gravelling with line Drain works</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Condition</td><td>Fair</td></tr> <tr><td>Notes</td><td>Earthen Surface road\nneed clearance and gravelling with line Drain</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_183829688.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>end of wilwil section\nearthen Surface road</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_183845707.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>Photo shows the road condition</td></tr></table>",
+        "folder": "Road Condition"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.504566667,
+          -3.736176667
+        ]
+      },
+      "properties": {
+        "name": "Road Condition 38",
+        "description": " <h4>Layer: Road Condition</h4><h4>Feature ID: 8994368e-8625-44cc-811c-577952a45e9b</h4><p>Remarks: earthen Surface \nneed clearance and gravelling with line Drain works</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Condition</td><td>Poor</td></tr> <tr><td>Notes</td><td></td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_184159020.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>Surface wash out\nKapul mountain</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_184218222.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td></td></tr></table>",
+        "folder": "Road Condition"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.503296667,
+          -3.740973333
+        ]
+      },
+      "properties": {
+        "name": "Road Condition 40",
+        "description": " <h4>Layer: Road Condition</h4><h4>Feature ID: ffa27c05-d4aa-489a-9271-42d3be70cde7</h4><p>Remarks: Earthen Surface\nneed clearance and gravelling with line Drain works.</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Condition</td><td>Poor</td></tr> <tr><td>Notes</td><td>The road condition is poor, hence it needs clearing Grabbing, regravelling and proper Drainage or side slope drain.</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_184841722.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>Kapul Section\nneed clearance and gravelling with line Drain works</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_184859649.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>The photo shows the road condition</td></tr></table>",
+        "folder": "Road Condition"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.504305,
+          -3.748541667
+        ]
+      },
+      "properties": {
+        "name": "Road Condition 41",
+        "description": " <h4>Layer: Road Condition</h4><h4>Feature ID: cbb7ed5f-9be7-4c2b-a593-872bf93ebb7b</h4><p>Remarks: Earthen Surface\nneed clearance and gravelling with line Drain works</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Condition</td><td>Poor</td></tr> <tr><td>Notes</td><td>The road condition is poor hence it needs clearing Grabbing, regravelling and proper Drainage or side slope drain.</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_185647350.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>kapul section need clearance and gravelling with line Drain works</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_185705406.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>Photo shows road condition</td></tr></table>",
+        "folder": "Road Condition"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.502681667,
+          -3.753278333
+        ]
+      },
+      "properties": {
+        "name": "Road Condition 50",
+        "description": " <h4>Layer: Road Condition</h4><h4>Feature ID: 6fbd828d-9a9a-4be1-8081-c3ace4e2ec61</h4><p>Remarks: Earthen Surface\nclearing and grabbing done with type D Excuvation\n\nneed gravelling</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Condition</td><td>Fair</td></tr> <tr><td>Notes</td><td>need gravelling</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_085933654.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>Krukru section</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_085943308.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td></td></tr></table>",
+        "folder": "Road Condition"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.500826667,
+          -3.757176667
+        ]
+      },
+      "properties": {
+        "name": "Road Condition 52",
+        "description": " <h4>Layer: Road Condition</h4><h4>Feature ID: 5288d5d3-fd87-44f7-b0e4-cb091b96eca5</h4><p>Remarks: The road condition is poor</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Condition</td><td>Poor</td></tr> <tr><td>Notes</td><td>Clearing Grabbing done but need gravelling and proper Drainage</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_090716196.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>krukru section\nPhoto shows the road</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_090730169.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>photo shows the road condition</td></tr></table>",
+        "folder": "Road Condition"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.499165,
+          -3.759278333
+        ]
+      },
+      "properties": {
+        "name": "Road Condition 53",
+        "description": " <h4>Layer: Road Condition</h4><h4>Feature ID: c7d7436d-a30e-44aa-a708-0a7114fbd78d</h4><p>Remarks: need Type A Excuvation of the Road for Road Widening</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Condition</td><td>Poor</td></tr> <tr><td>Notes</td><td>road width Nerrow by rock and Gabion Basket works on LHS</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_091057314.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>Wambol\nphoto shows the road condition</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_091116774.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>photo shows the land slide area</td></tr></table>",
+        "folder": "Road Condition"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.496641667,
+          -3.763891667
+        ]
+      },
+      "properties": {
+        "name": "Road Condition 57",
+        "description": " <h4>Layer: Road Condition</h4><h4>Feature ID: d577d743-e38a-47ca-bc5e-21f3448b2c81</h4><p>Remarks: water log area\nneed clearance and gravelling</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Condition</td><td>Poor</td></tr> <tr><td>Notes</td><td>water log area need require heavy maintenance work, excuvate and remove soft soil and backfill with Boulder, gravelling the surface and proper Drainage or side slope drain on both side</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_092131764.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>Photo shows the road condition</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_092146029.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>Photo shows the road</td></tr></table>",
+        "folder": "Road Condition"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.497868333,
+          -3.778518333
+        ]
+      },
+      "properties": {
+        "name": "Road Condition 59",
+        "description": " <h4>Layer: Road Condition</h4><h4>Feature ID: 429dad6c-10db-4720-8e8f-eaa80f6b62c4</h4><p>Remarks: Wanda pangi section \nThe road condition is fair and dry surface.</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Condition</td><td>Fair</td></tr> <tr><td>Notes</td><td>The road condition is fair. Hence proper Drainage or side slope on RHS with gravelling on Earthen Surface is propose.</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_093223347.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>need clearance and gravelling and line Drain works</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_093241568.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>Photo shows the road condition</td></tr></table>",
+        "folder": "Road Condition"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.498943333,
+          -3.78089
+        ]
+      },
+      "properties": {
+        "name": "Road Condition 60",
+        "description": " <h4>Layer: Road Condition</h4><h4>Feature ID: b189ba0c-aba2-4f15-93eb-0a21e8ef5815</h4><p>Remarks: ILO funded project Clearing and Grabbing</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Condition</td><td>Fair</td></tr> <tr><td>Notes</td><td>Clearing and grabbing continue, hence the road surface need gravelling and proper Drainage or side slope drain on both side</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_094250734.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>Wanda pagi section\nPhoto shows the road condition</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_094307132.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>Photo shows the road condition</td></tr></table>",
+        "folder": "Road Condition"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.503513333,
+          -3.784421667
+        ]
+      },
+      "properties": {
+        "name": "Road Condition 61",
+        "description": " <h4>Layer: Road Condition</h4><h4>Feature ID: 1b99fbad-47e9-47a3-a3f3-53db0666fa00</h4><p>Remarks: Clearing and Grabbing\ndone by ILO contractor\n\nneed proper clearing and gravelling</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Condition</td><td>Fair</td></tr> <tr><td>Notes</td><td>Clearing and grabbing continue, hence the road surface need gravelling and proper Drainage or side slope drain on both side</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_095006514.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td></td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_095022988.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td></td></tr></table>",
+        "folder": "Road Condition"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.503998333,
+          -3.787428333
+        ]
+      },
+      "properties": {
+        "name": "Road Condition 65",
+        "description": " <h4>Layer: Road Condition</h4><h4>Feature ID: 5ba5617d-8b9b-4d30-b0ad-875e75627324</h4><p>Remarks: need clearing and Grabbing and gravelling</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Condition</td><td>Poor</td></tr> <tr><td>Notes</td><td>need clearance and gravelling</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_100307034.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td></td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_100317145.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td></td></tr></table>",
+        "folder": "Road Condition"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.506245,
+          -3.792606667
+        ]
+      },
+      "properties": {
+        "name": "Road Condition 68",
+        "description": " <h4>Layer: Road Condition</h4><h4>Feature ID: 8dacb911-80ad-45c3-817e-121ef7872ba0</h4><p>Remarks: Clearing and Grabbing done by ILO contractor\n\nneed proper clearing and gravelling</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Condition</td><td>Fair</td></tr> <tr><td>Notes</td><td>Clearing Grabbing done, hence proper Drainage or side slope drain with gravelling on the road surface is propose.</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_101355767.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>tagunaro primary school section</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_101408949.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td></td></tr></table>",
+        "folder": "Road Condition"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.506371667,
+          -3.800495
+        ]
+      },
+      "properties": {
+        "name": "Road Condition 73",
+        "description": " <h4>Layer: Road Condition</h4><h4>Feature ID: cabcd370-9e02-4c00-a14e-e07656e1f640</h4><p>Remarks: clearing and Grabbing done by ILO contractor\nneed gravelling and proper clearing</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Condition</td><td>Fair</td></tr> <tr><td>Notes</td><td>Clearing Grabbing done by the contractor hence proper Drainage or side slope drain on LHS with gravelling on the road surface is propose.</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_103025533.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>The photo shows the road condition</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_103039388.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>The photo shows the road condition</td></tr></table>",
+        "folder": "Road Condition"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.505,
+          -3.809151622
+        ]
+      },
+      "properties": {
+        "name": "Road Condition 74",
+        "description": " <h4>Layer: Road Condition</h4><h4>Feature ID: 0a53016a-bc75-4d01-beb7-400553c5f1be</h4><p>Remarks: clearing and gravelling done by ILO contractor\n\nneed proper clearing and gravelling</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Condition</td><td>Fair</td></tr> <tr><td>Notes</td><td>Clearing Grabbing done by the contractor hence proper Drainage or side slope drain on LHS with gravelling on the road surface is propose.</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_103548850.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>Photo shows the road condition</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_103603479.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>Photo shows the road condition</td></tr></table>",
+        "folder": "Road Condition"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.50336,
+          -3.816251667
+        ]
+      },
+      "properties": {
+        "name": "Road Condition 76",
+        "description": " <h4>Layer: Road Condition</h4><h4>Feature ID: ad31664a-e526-4a39-8ec0-b7f7cee640fb</h4><p>Remarks: Clearing and Grabbing done by ILO contractor... \nneed proper clearing and Gravelling</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Condition</td><td>Fair</td></tr> <tr><td>Notes</td><td>Clearing Grabbing done by the contractor hence proper Drainage or side slope drain on both side with gravelling on the road surface is propose.</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_104335154.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>Wilbowe section clearing and Grabbing done by ILO contractor</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_104350244.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>Photo shows the road condition</td></tr></table>",
+        "folder": "Road Condition"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.504821667,
+          -3.816936667
+        ]
+      },
+      "properties": {
+        "name": "Road Condition 78",
+        "description": " <h4>Layer: Road Condition</h4><h4>Feature ID: dca4057e-59f8-45fb-82d5-bfe8c5bdbe05</h4><p>Remarks: clearing and Grabbing done by ILO contractor end\n\nneed to continue clearing Grabbing and gravelling works</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Condition</td><td>Fair</td></tr> <tr><td>Notes</td><td>End of Clearing Grabbing and road continue with Earthen Surface with bush.</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_105200542.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>The photo shows the road condition</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_105208635.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>The photo shows the road</td></tr></table>",
+        "folder": "Road Condition"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.505116667,
+          -3.818218333
+        ]
+      },
+      "properties": {
+        "name": "Road Condition 80",
+        "description": " <h4>Layer: Road Condition</h4><h4>Feature ID: ef7ad8bd-08d6-48d5-85d6-1b014b748e46</h4><p>Remarks: Bush and no road\nneed clearance and Grabbing continue with gravelling</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Condition</td><td>Very Poor</td></tr> <tr><td>Notes</td><td>The road condition is very poor which require heavy maintenance work such as clearing Grabbing, proper Drainage or side slope drain on both side with gravelling on road surface.</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_105751154.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>The photo shows the road condition</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_105809000.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>the photo shows the road condition</td></tr></table>",
+        "folder": "Road Condition"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.504404242,
+          -3.819684394
+        ]
+      },
+      "properties": {
+        "name": "Road Condition 81",
+        "description": " <h4>Layer: Road Condition</h4><h4>Feature ID: 765c5f84-887b-444b-b247-4f2b6d81993b</h4><p>Remarks: The road condition is very poor</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Condition</td><td>Very Poor</td></tr> <tr><td>Notes</td><td>Wilbowe section end of Road\nThe road condition is very poor which require heavy maintenance work such as clearing Grabbing, proper Drainage or side slope drain on both side with gravelling on road surface.</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_110112942.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>The road condition is very poor</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_110131764.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>End of Road\nthe road condition is very poor</td></tr></table>",
+        "folder": "Road Condition"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.503776667,
+          -3.720606667
+        ]
+      },
+      "properties": {
+        "name": "Health Facilities 46",
+        "description": " <h4>Layer: Health Facilities</h4><h4>Feature ID: 588e9bc3-a48f-47af-8968-139e15d08549</h4><p>Remarks: Wilwil Aid post</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Name</td><td>Wilwil Aid post</td></tr> <tr><td>Type</td><td>Health Post</td></tr> <tr><td>Beds</td><td></td></tr> <tr><td>Visitors</td><td>5</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_083530378.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>Photo shows the Wilwil Aid Post</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_083544581.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>Photo shows the Wilwil Aid post.</td></tr></table>",
+        "folder": "Health Facilities"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.503556667,
+          -3.718876667
+        ]
+      },
+      "properties": {
+        "name": "Education Facilities 30",
+        "description": " <h4>Layer: Education Facilities</h4><h4>Feature ID: 114ab453-de2a-4288-83a0-5167dee2fed3</h4><p>Remarks: wilwil Primary school</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Name</td><td>Wilwil primary school</td></tr> <tr><td>Type</td><td>Primary School</td></tr> <tr><td>No of Students</td><td>200</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_181250469.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>wilwil primary school</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_181301250.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td></td></tr></table>",
+        "folder": "Education Facilities"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.506248333,
+          -3.792703333
+        ]
+      },
+      "properties": {
+        "name": "Education Facilities 69",
+        "description": " <h4>Layer: Education Facilities</h4><h4>Feature ID: f92d710e-c9e6-440a-a798-c8b535890e2e</h4><p>Remarks: Tagunaro primary school</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Name</td><td>Tagunaro primary school</td></tr> <tr><td>Type</td><td>Primary School</td></tr> <tr><td>No of Students</td><td>230</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_101556821.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>Photo shows the  school area</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_101612672.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>Photo shows the School</td></tr></table>",
+        "folder": "Education Facilities"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.503685,
+          -3.679443333
+        ]
+      },
+      "properties": {
+        "name": "Pavement 1",
+        "description": " <h4>Layer: Pavement</h4><h4>Feature ID: 4ce41a3b-ba21-4a57-93fd-07edd3e83129</h4><p>Remarks: Gravelling Road \nneed line Drain and Subase and Base course top up</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Pavement Type</td><td>GRAVEL</td></tr> <tr><td>Thickness (mm)</td><td>200</td></tr> <tr><td>Base Thickness (mm)</td><td></td></tr> <tr><td>Sub-base Thickness (mm)</td><td>200</td></tr> <tr><td>Pavement Width (m)</td><td>7</td></tr> <tr><td>Formation Width (m)</td><td>7</td></tr> <tr><td>No of Lanes</td><td>2</td></tr> <tr><td>Sub-grade Soil</td><td>Filled Material</td></tr> <tr><td>Road Condition</td><td>Good</td></tr> <tr><td>Left Shoulder Width (m)</td><td>3.5</td></tr> <tr><td>Left Shoulder Type</td><td>Gravel</td></tr> <tr><td>Right Shoulder Width (m)</td><td>3.5</td></tr> <tr><td>Right Shoulder Type</td><td>Gravel</td></tr> <tr><td>Update Notes</td><td>Road Surface Gravelling with Subgrade material</td></tr> <tr><td>Construction Year</td><td>1975</td></tr> <tr><td>Last Resurface Year</td><td>2024</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_165002537.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>Photo shows on Yiminum Junction</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_165012659.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>Photo shows on Yiminum Junction</td></tr></table>",
+        "folder": "Pavement"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.503371667,
+          -3.716088333
+        ]
+      },
+      "properties": {
+        "name": "Pavement 28",
+        "description": " <h4>Layer: Pavement</h4><h4>Feature ID: 78d86563-4366-40cb-9eea-42a98a606680</h4><p>Remarks: need clearance and Grabbing and Gravelling</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Pavement Type</td><td>EARTHEN</td></tr> <tr><td>Thickness (mm)</td><td>0.2</td></tr> <tr><td>Base Thickness (mm)</td><td></td></tr> <tr><td>Sub-base Thickness (mm)</td><td></td></tr> <tr><td>Pavement Width (m)</td><td></td></tr> <tr><td>Formation Width (m)</td><td>5</td></tr> <tr><td>No of Lanes</td><td>1</td></tr> <tr><td>Sub-grade Soil</td><td>Oridinary Soil</td></tr> <tr><td>Road Condition</td><td>Good</td></tr> <tr><td>Left Shoulder Width (m)</td><td>2.5</td></tr> <tr><td>Left Shoulder Type</td><td>Earthern</td></tr> <tr><td>Right Shoulder Width (m)</td><td>2.5</td></tr> <tr><td>Right Shoulder Type</td><td>Earthern</td></tr> <tr><td>Update Notes</td><td>need patrol grading, road widening and Gravelling</td></tr> <tr><td>Construction Year</td><td>1997</td></tr> <tr><td>Last Resurface Year</td><td>2023</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_180805091.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td></td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_180814219.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td></td></tr></table>",
+        "folder": "Pavement"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.503693333,
+          -3.72023
+        ]
+      },
+      "properties": {
+        "name": "Pavement 32",
+        "description": " <h4>Layer: Pavement</h4><h4>Feature ID: 35a35012-9487-413b-9e35-3702af584219</h4><p>Remarks: Gravelling of Subgrade material start and End of Earthen Surface</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Pavement Type</td><td>GRAVEL</td></tr> <tr><td>Thickness (mm)</td><td>300</td></tr> <tr><td>Base Thickness (mm)</td><td></td></tr> <tr><td>Sub-base Thickness (mm)</td><td></td></tr> <tr><td>Pavement Width (m)</td><td></td></tr> <tr><td>Formation Width (m)</td><td>7</td></tr> <tr><td>No of Lanes</td><td>2</td></tr> <tr><td>Sub-grade Soil</td><td>Filled Material</td></tr> <tr><td>Road Condition</td><td>Good</td></tr> <tr><td>Left Shoulder Width (m)</td><td>3.5</td></tr> <tr><td>Left Shoulder Type</td><td>Gravel</td></tr> <tr><td>Right Shoulder Width (m)</td><td>3.5</td></tr> <tr><td>Right Shoulder Type</td><td>Gravel</td></tr> <tr><td>Update Notes</td><td>Gravelling of Subgrade material\nneed topping up of Subase and Base course material</td></tr> <tr><td>Construction Year</td><td></td></tr> <tr><td>Last Resurface Year</td><td>2024</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_182032659.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>wilwil primary school\nend of Earthen Surface and begin of Gravelling Surface</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_182055074.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>wilwil primary school\nGravelling section</td></tr></table>",
+        "folder": "Pavement"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.50383,
+          -3.720611667
+        ]
+      },
+      "properties": {
+        "name": "Pavement 33",
+        "description": " <h4>Layer: Pavement</h4><h4>Feature ID: 5a089fa8-07ac-4457-a285-4ffd795991e9</h4><p>Remarks: gravelling End and begin of Earthen Surface</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Pavement Type</td><td>GRAVEL</td></tr> <tr><td>Thickness (mm)</td><td>300</td></tr> <tr><td>Base Thickness (mm)</td><td></td></tr> <tr><td>Sub-base Thickness (mm)</td><td></td></tr> <tr><td>Pavement Width (m)</td><td></td></tr> <tr><td>Formation Width (m)</td><td>7</td></tr> <tr><td>No of Lanes</td><td>2</td></tr> <tr><td>Sub-grade Soil</td><td>Filled Material</td></tr> <tr><td>Road Condition</td><td>Good</td></tr> <tr><td>Left Shoulder Width (m)</td><td>3.5</td></tr> <tr><td>Left Shoulder Type</td><td>Gravel</td></tr> <tr><td>Right Shoulder Width (m)</td><td>3.5</td></tr> <tr><td>Right Shoulder Type</td><td>Gravel</td></tr> <tr><td>Update Notes</td><td>gravelling End and begin of Earthen Surface</td></tr> <tr><td>Construction Year</td><td></td></tr> <tr><td>Last Resurface Year</td><td>2024</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_182524125.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>photo shows the road condition</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_182535323.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>Photo shows the road condition</td></tr></table>",
+        "folder": "Pavement"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.50616,
+          -3.724596667
+        ]
+      },
+      "properties": {
+        "name": "Pavement 34",
+        "description": " <h4>Layer: Pavement</h4><h4>Feature ID: 29c4c642-7d94-4f89-8cba-163e81666048</h4><p>Remarks: Earthen Surface\nneed clearance and gravelling</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Pavement Type</td><td>EARTHEN</td></tr> <tr><td>Thickness (mm)</td><td></td></tr> <tr><td>Base Thickness (mm)</td><td></td></tr> <tr><td>Sub-base Thickness (mm)</td><td></td></tr> <tr><td>Pavement Width (m)</td><td></td></tr> <tr><td>Formation Width (m)</td><td>7</td></tr> <tr><td>No of Lanes</td><td>2</td></tr> <tr><td>Sub-grade Soil</td><td>Oridinary Soil</td></tr> <tr><td>Road Condition</td><td>Fair</td></tr> <tr><td>Left Shoulder Width (m)</td><td>3.5</td></tr> <tr><td>Left Shoulder Type</td><td>Earthern</td></tr> <tr><td>Right Shoulder Width (m)</td><td>3.5</td></tr> <tr><td>Right Shoulder Type</td><td>Earthern</td></tr> <tr><td>Update Notes</td><td>need clearance and gravelling</td></tr> <tr><td>Construction Year</td><td></td></tr> <tr><td>Last Resurface Year</td><td>1997</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_182921912.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>wilwil Earthen Surface</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_182938666.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td></td></tr></table>",
+        "folder": "Pavement"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.503683333,
+          -3.712925
+        ]
+      },
+      "properties": {
+        "name": "Pavement 42",
+        "description": " <h4>Layer: Pavement</h4><h4>Feature ID: 52954122-b907-4b94-a048-ffffe164ff29</h4><p>Remarks: Gravelling End here\nBegini of Earthen Surface</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Pavement Type</td><td>GRAVEL</td></tr> <tr><td>Thickness (mm)</td><td>200</td></tr> <tr><td>Base Thickness (mm)</td><td></td></tr> <tr><td>Sub-base Thickness (mm)</td><td></td></tr> <tr><td>Pavement Width (m)</td><td>7</td></tr> <tr><td>Formation Width (m)</td><td>7</td></tr> <tr><td>No of Lanes</td><td>2</td></tr> <tr><td>Sub-grade Soil</td><td>Filled Material</td></tr> <tr><td>Road Condition</td><td>Good</td></tr> <tr><td>Left Shoulder Width (m)</td><td>3.5</td></tr> <tr><td>Left Shoulder Type</td><td>Gravel</td></tr> <tr><td>Right Shoulder Width (m)</td><td>3.5</td></tr> <tr><td>Right Shoulder Type</td><td>Gravel</td></tr> <tr><td>Update Notes</td><td>need topping up of Subase and Base course material and continuous gravelling</td></tr> <tr><td>Construction Year</td><td></td></tr> <tr><td>Last Resurface Year</td><td>2024</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_081934282.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>photo shows the road surface</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_081947827.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>photo shows the road surface end of gravelling and begini of gravelling mix soil Surface</td></tr></table>",
+        "folder": "Pavement"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.50365,
+          -3.712961111
+        ]
+      },
+      "properties": {
+        "name": "Pavement 43",
+        "description": " <h4>Layer: Pavement</h4><h4>Feature ID: ec89fed1-49d8-44c8-8996-10d82b390dfa</h4><p>Remarks: earthen Surface start here\nend of gravelling</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Pavement Type</td><td>EARTHEN</td></tr> <tr><td>Thickness (mm)</td><td>200</td></tr> <tr><td>Base Thickness (mm)</td><td></td></tr> <tr><td>Sub-base Thickness (mm)</td><td></td></tr> <tr><td>Pavement Width (m)</td><td></td></tr> <tr><td>Formation Width (m)</td><td>5</td></tr> <tr><td>No of Lanes</td><td>2</td></tr> <tr><td>Sub-grade Soil</td><td>Oridinary Soil</td></tr> <tr><td>Road Condition</td><td>Fair</td></tr> <tr><td>Left Shoulder Width (m)</td><td>2.5</td></tr> <tr><td>Left Shoulder Type</td><td>Earthern</td></tr> <tr><td>Right Shoulder Width (m)</td><td>2.5</td></tr> <tr><td>Right Shoulder Type</td><td>Earthern</td></tr> <tr><td>Update Notes</td><td>need clearance and gravelling</td></tr> <tr><td>Construction Year</td><td></td></tr> <tr><td>Last Resurface Year</td><td>2022</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_082209502.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>Wilwil end of gravelling\nlast Surface Clearance done in 2022</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_082228661.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>Photo shows the road condition</td></tr></table>",
+        "folder": "Pavement"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.503631852,
+          -3.720066852
+        ]
+      },
+      "properties": {
+        "name": "Pavement 44",
+        "description": " <h4>Layer: Pavement</h4><h4>Feature ID: d713ea33-931c-458d-b14d-079dbf991aaf</h4><p>Remarks: End of Earthen Surface\nbegini of Gravelling Surface</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Pavement Type</td><td>ASPHALT CONCRETE</td></tr> <tr><td>Thickness (mm)</td><td>200</td></tr> <tr><td>Base Thickness (mm)</td><td></td></tr> <tr><td>Sub-base Thickness (mm)</td><td></td></tr> <tr><td>Pavement Width (m)</td><td>5</td></tr> <tr><td>Formation Width (m)</td><td></td></tr> <tr><td>No of Lanes</td><td>2</td></tr> <tr><td>Sub-grade Soil</td><td>Oridinary Soil</td></tr> <tr><td>Road Condition</td><td>Fair</td></tr> <tr><td>Left Shoulder Width (m)</td><td>2.5</td></tr> <tr><td>Left Shoulder Type</td><td>Earthern</td></tr> <tr><td>Right Shoulder Width (m)</td><td>2.5</td></tr> <tr><td>Right Shoulder Type</td><td>Earthern</td></tr> <tr><td>Update Notes</td><td>The road condition is fair hence it needs clearing Grabbing, regravelling and proper Drainage or side slope drain.</td></tr> <tr><td>Construction Year</td><td></td></tr> <tr><td>Last Resurface Year</td><td>2022</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_083029052.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>Photo shows the road condition</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_083040497.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>Photo shows the road condition</td></tr></table>",
+        "folder": "Pavement"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.503828333,
+          -3.720673333
+        ]
+      },
+      "properties": {
+        "name": "Pavement 45",
+        "description": " <h4>Layer: Pavement</h4><h4>Feature ID: b6897f61-319f-4d45-83a7-c325a41c8136</h4><p>Remarks: Begini of earthen Surface\nEnd of gravelling</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Pavement Type</td><td>EARTHEN</td></tr> <tr><td>Thickness (mm)</td><td>200</td></tr> <tr><td>Base Thickness (mm)</td><td></td></tr> <tr><td>Sub-base Thickness (mm)</td><td></td></tr> <tr><td>Pavement Width (m)</td><td></td></tr> <tr><td>Formation Width (m)</td><td>3</td></tr> <tr><td>No of Lanes</td><td>2</td></tr> <tr><td>Sub-grade Soil</td><td>Oridinary Soil</td></tr> <tr><td>Road Condition</td><td>Fair</td></tr> <tr><td>Left Shoulder Width (m)</td><td>1.5</td></tr> <tr><td>Left Shoulder Type</td><td>Earthern</td></tr> <tr><td>Right Shoulder Width (m)</td><td>1.5</td></tr> <tr><td>Right Shoulder Type</td><td>Earthern</td></tr> <tr><td>Update Notes</td><td>Need clearance and gravelling</td></tr> <tr><td>Construction Year</td><td></td></tr> <tr><td>Last Resurface Year</td><td></td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_083332947.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>Photo shows the road condition</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_083345138.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>Photo shows the road condition</td></tr></table>",
+        "folder": "Pavement"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.502665,
+          -3.75319
+        ]
+      },
+      "properties": {
+        "name": "Pavement 49",
+        "description": " <h4>Layer: Pavement</h4><h4>Feature ID: 9d89d660-1e62-4e93-8f35-d7cfec02f1b4</h4><p>Remarks: ILO yiminum -Wilbowe road 9km project (Ch 8+900-17+900) \nroad clearing and grabbing start</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Pavement Type</td><td>EARTHEN</td></tr> <tr><td>Thickness (mm)</td><td>200</td></tr> <tr><td>Base Thickness (mm)</td><td></td></tr> <tr><td>Sub-base Thickness (mm)</td><td></td></tr> <tr><td>Pavement Width (m)</td><td></td></tr> <tr><td>Formation Width (m)</td><td>8</td></tr> <tr><td>No of Lanes</td><td>2</td></tr> <tr><td>Sub-grade Soil</td><td>Oridinary Soil</td></tr> <tr><td>Road Condition</td><td>Fair</td></tr> <tr><td>Left Shoulder Width (m)</td><td>4</td></tr> <tr><td>Left Shoulder Type</td><td>Earthern</td></tr> <tr><td>Right Shoulder Width (m)</td><td>4</td></tr> <tr><td>Right Shoulder Type</td><td>Earthern</td></tr> <tr><td>Update Notes</td><td>The Road clearing Grabbing start here which need gravelling and proper Drainage or side slope drain on both side</td></tr> <tr><td>Construction Year</td><td></td></tr> <tr><td>Last Resurface Year</td><td>2024</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_085710449.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>The photo shows the road condition</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_085733419.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>The photo shows the road condition</td></tr></table>",
+        "folder": "Pavement"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.503988333,
+          -3.787493333
+        ]
+      },
+      "properties": {
+        "name": "Pavement 64",
+        "description": " <h4>Layer: Pavement</h4><h4>Feature ID: a02b28e9-d637-4061-93db-2138b345de42</h4><p>Remarks: Clearing and Grabbing done by ILO contractor stop here</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Pavement Type</td><td>EARTHEN</td></tr> <tr><td>Thickness (mm)</td><td>200</td></tr> <tr><td>Base Thickness (mm)</td><td></td></tr> <tr><td>Sub-base Thickness (mm)</td><td></td></tr> <tr><td>Pavement Width (m)</td><td></td></tr> <tr><td>Formation Width (m)</td><td>8</td></tr> <tr><td>No of Lanes</td><td>2</td></tr> <tr><td>Sub-grade Soil</td><td>Oridinary Soil</td></tr> <tr><td>Road Condition</td><td>Fair</td></tr> <tr><td>Left Shoulder Width (m)</td><td>4</td></tr> <tr><td>Left Shoulder Type</td><td>Earthern</td></tr> <tr><td>Right Shoulder Width (m)</td><td>4</td></tr> <tr><td>Right Shoulder Type</td><td>Earthern</td></tr> <tr><td>Update Notes</td><td>Contractor stop here on the clearing and Grabbing.</td></tr> <tr><td>Construction Year</td><td></td></tr> <tr><td>Last Resurface Year</td><td>2024</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_100045302.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>tagunaro section\nPhoto shows the road condition</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_100100552.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>Photo shows the road condition</td></tr></table>",
+        "folder": "Pavement"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.504576667,
+          -3.788486667
+        ]
+      },
+      "properties": {
+        "name": "Pavement 67",
+        "description": " <h4>Layer: Pavement</h4><h4>Feature ID: 909eb915-f6e5-443d-81bd-be9fac0b20df</h4><p>Remarks: ILO contractor Continue Clearing and gravelling here</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Pavement Type</td><td>EARTHEN</td></tr> <tr><td>Thickness (mm)</td><td></td></tr> <tr><td>Base Thickness (mm)</td><td></td></tr> <tr><td>Sub-base Thickness (mm)</td><td></td></tr> <tr><td>Pavement Width (m)</td><td></td></tr> <tr><td>Formation Width (m)</td><td>8</td></tr> <tr><td>No of Lanes</td><td>2</td></tr> <tr><td>Sub-grade Soil</td><td>Oridinary Soil</td></tr> <tr><td>Road Condition</td><td>Poor</td></tr> <tr><td>Left Shoulder Width (m)</td><td>4</td></tr> <tr><td>Left Shoulder Type</td><td>Earthern</td></tr> <tr><td>Right Shoulder Width (m)</td><td>4</td></tr> <tr><td>Right Shoulder Type</td><td>Earthern</td></tr> <tr><td>Update Notes</td><td>The clearing Grabbing has been done hence proper Drainage or side slope drain on RHS with gravelling on the Earthen Surface is propose.</td></tr> <tr><td>Construction Year</td><td></td></tr> <tr><td>Last Resurface Year</td><td>2024</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_100911272.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>tauganaro clearing and Grabbing continue</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_100931245.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>Photo shows the end and continue of the clearing Grabbing.</td></tr></table>",
+        "folder": "Pavement"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.504878333,
+          -3.816833333
+        ]
+      },
+      "properties": {
+        "name": "Pavement 77",
+        "description": " <h4>Layer: Pavement</h4><h4>Feature ID: 41f04071-57aa-4b96-ad47-72f0c4515488</h4><p>Remarks: ILO contractor end clearing and Grabbing here at wilbowe...</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Pavement Type</td><td>EARTHEN</td></tr> <tr><td>Thickness (mm)</td><td></td></tr> <tr><td>Base Thickness (mm)</td><td></td></tr> <tr><td>Sub-base Thickness (mm)</td><td></td></tr> <tr><td>Pavement Width (m)</td><td></td></tr> <tr><td>Formation Width (m)</td><td>2</td></tr> <tr><td>No of Lanes</td><td>1</td></tr> <tr><td>Sub-grade Soil</td><td>Oridinary Soil</td></tr> <tr><td>Road Condition</td><td>Poor (Heavy Maintenance)</td></tr> <tr><td>Left Shoulder Width (m)</td><td>1</td></tr> <tr><td>Left Shoulder Type</td><td>Earthern</td></tr> <tr><td>Right Shoulder Width (m)</td><td>1</td></tr> <tr><td>Right Shoulder Type</td><td>Earthern</td></tr> <tr><td>Update Notes</td><td>Need clearing Grabbing, gravelling on surface and proper Drainage or side slope drain on both side.</td></tr> <tr><td>Construction Year</td><td></td></tr> <tr><td>Last Resurface Year</td><td>2025</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_104903176.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>Wilbowe section\nclearing and Grabbing end</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_104934128.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>Photo shows the road condition</td></tr></table>",
+        "folder": "Pavement"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.505016667,
+          -3.817028333
+        ]
+      },
+      "properties": {
+        "name": "Pavement 79",
+        "description": " <h4>Layer: Pavement</h4><h4>Feature ID: 830beba7-bb61-4bc8-ab7e-6f3bc6deb874</h4><p>Remarks: Clearing Grabbing end here road continue with Earthen Surface with bush growing on the road.</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Pavement Type</td><td>EARTHEN</td></tr> <tr><td>Thickness (mm)</td><td></td></tr> <tr><td>Base Thickness (mm)</td><td></td></tr> <tr><td>Sub-base Thickness (mm)</td><td></td></tr> <tr><td>Pavement Width (m)</td><td></td></tr> <tr><td>Formation Width (m)</td><td>5</td></tr> <tr><td>No of Lanes</td><td>2</td></tr> <tr><td>Sub-grade Soil</td><td>Oridinary Soil</td></tr> <tr><td>Road Condition</td><td>Poor</td></tr> <tr><td>Left Shoulder Width (m)</td><td>2.5</td></tr> <tr><td>Left Shoulder Type</td><td>Earthern</td></tr> <tr><td>Right Shoulder Width (m)</td><td>2.5</td></tr> <tr><td>Right Shoulder Type</td><td>Earthern</td></tr> <tr><td>Update Notes</td><td>need clearing and Grabbing continue with gravelling works</td></tr> <tr><td>Construction Year</td><td></td></tr> <tr><td>Last Resurface Year</td><td>2025</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_105534344.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>photo shows the road condition which the continue of the Earthen Surface with grass growing on the road.</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_105455997.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>Photo shows the road condition which is the end of clearing Grabbing.</td></tr></table>",
+        "folder": "Pavement"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.50437,
+          -3.819695
+        ]
+      },
+      "properties": {
+        "name": "Pavement 82",
+        "description": " <h4>Layer: Pavement</h4><h4>Feature ID: 6fad973c-7933-4d42-8bbe-cc26061cf1d7</h4><p>Remarks: End of road\nWilbowe section\nbush grow and cover Road</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Pavement Type</td><td>EARTHEN</td></tr> <tr><td>Thickness (mm)</td><td></td></tr> <tr><td>Base Thickness (mm)</td><td></td></tr> <tr><td>Sub-base Thickness (mm)</td><td></td></tr> <tr><td>Pavement Width (m)</td><td></td></tr> <tr><td>Formation Width (m)</td><td>2</td></tr> <tr><td>No of Lanes</td><td>1</td></tr> <tr><td>Sub-grade Soil</td><td>Oridinary Soil</td></tr> <tr><td>Road Condition</td><td>Poor</td></tr> <tr><td>Left Shoulder Width (m)</td><td>1</td></tr> <tr><td>Left Shoulder Type</td><td>Earthern</td></tr> <tr><td>Right Shoulder Width (m)</td><td>1</td></tr> <tr><td>Right Shoulder Type</td><td>Earthern</td></tr> <tr><td>Update Notes</td><td>The road condition is very poor which require heavy maintenance work such as clearing Grabbing, proper Drainage or side slope drain on both side with gravelling on road surface.</td></tr> <tr><td>Construction Year</td><td></td></tr> <tr><td>Last Resurface Year</td><td>2003</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_110447365.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>The photo shows the road condition at the end of project</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250126_110503964.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>The photo shows the road condition at the end of road project.</td></tr></table>",
+        "folder": "Pavement"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.50595,
+          -3.691145
+        ]
+      },
+      "properties": {
+        "name": "Culvert 11",
+        "description": " <h4>Layer: Culvert</h4><h4>Feature ID: 5ec366ed-acc5-41b3-b681-77c79b05833d</h4><p>Remarks: Block Culvert</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Culvert Type</td><td>Steel Pipe Culvert</td></tr> <tr><td>Barrels/No Spans</td><td>7</td></tr> <tr><td>Width (m)</td><td>7</td></tr> <tr><td>1. Spans/Barrels</td><td>7</td></tr> <tr><td>1. Spans/Diameter</td><td>0.6</td></tr> <tr><td>2. Spans/Barrels</td><td>7</td></tr> <tr><td>2. Spans/Diameter</td><td>0.6</td></tr> <tr><td>Total Span (m)</td><td>7</td></tr> <tr><td>Condition</td><td>Very Poor</td></tr> <tr><td>Intervention Required</td><td>need clearance and Replacement</td></tr> <tr><td>Update Notes</td><td>need clearance and Replacement</td></tr> <tr><td>Construciton Year</td><td>1997</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_172135622.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td>inlet</td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_172211204.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td>outlet</td></tr></table>",
+        "folder": "Culvert"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.505891667,
+          -3.692275
+        ]
+      },
+      "properties": {
+        "name": "Culvert 14",
+        "description": " <h4>Layer: Culvert</h4><h4>Feature ID: 502ef7f0-56e8-43bc-8a76-596e9a6d9353</h4><p>Remarks: Block Culvert</p><p>Fix Quality: Single</p><table border='1'> <tr><td>Culvert Type</td><td>Steel Pipe Culvert</td></tr> <tr><td>Barrels/No Spans</td><td>7</td></tr> <tr><td>Width (m)</td><td>7</td></tr> <tr><td>1. Spans/Barrels</td><td>7</td></tr> <tr><td>1. Spans/Diameter</td><td>0.9</td></tr> <tr><td>2. Spans/Barrels</td><td>7</td></tr> <tr><td>2. Spans/Diameter</td><td>0.9</td></tr> <tr><td>Total Span (m)</td><td>7</td></tr> <tr><td>Condition</td><td>Very Poor</td></tr> <tr><td>Intervention Required</td><td>need clearance and Replacement</td></tr> <tr><td>Update Notes</td><td>need clearance and replacement</td></tr> <tr><td>Construciton Year</td><td>1997</td></tr> <tr><td>Photo1</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_173030981.jpg' width='200' /></td></tr> <tr><td>Photo1 Description</td><td></td></tr> <tr><td>Photo2</td><td><img src='files/Yiminum-Wilbowe (21km)_20250125_173046334.jpg' width='200' /></td></tr> <tr><td>Photo2 Description</td><td></td></tr></table>",
+        "folder": "Culvert"
+      }
+    }
+  ]
+}
