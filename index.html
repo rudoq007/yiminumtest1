@@ -39,7 +39,6 @@
 
 <script>
 let map, player, geoData = [], marker, trailLine, activePopup;
-let started = false;
 
 map = new maplibregl.Map({
   container: 'map',
@@ -73,10 +72,7 @@ map.on('load', () => {
 
   map.addSource('trail', {
     type: 'geojson',
-    data: {
-      type: 'FeatureCollection',
-      features: []
-    }
+    data: { type: 'FeatureCollection', features: [] }
   });
 
   map.addLayer({
@@ -100,10 +96,7 @@ map.on('load', () => {
   fetch('yiminum_popups_clean.geojson')
     .then(res => res.json())
     .then(data => {
-      map.addSource('popups', {
-        type: 'geojson',
-        data: data
-      });
+      map.addSource('popups', { type: 'geojson', data: data });
 
       map.loadImage('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Map_marker_icon_%E2%80%93_Nicolas_Mollet_%E2%80%93_Location_%E2%80%93_Tourism_%E2%80%93_Red.png/48px-Map_marker_icon_%E2%80%93_Nicolas_Mollet_%E2%80%93_Location_%E2%80%93_Tourism_%E2%80%93_Red.png',
         (error, image) => {
@@ -165,29 +158,35 @@ function syncWithVideo() {
   let [lon, lat] = closest.geometry.coordinates;
   marker.setLngLat([lon, lat]);
 
-  // Draw trail line
+  // Update trail
   let trailCoords = points.slice(0, index + 1).map(f => f.geometry.coordinates);
   map.getSource('trail').setData({
     type: 'Feature',
-    geometry: {
-      type: 'LineString',
-      coordinates: trailCoords
-    }
+    geometry: { type: 'LineString', coordinates: trailCoords }
   });
 
-  // Trigger popups for photo points only
+  // Popups
   window.popupPoints?.forEach(p => {
     if (!p.shown) {
       const dx = p.geometry.coordinates[0] - lon;
       const dy = p.geometry.coordinates[1] - lat;
-      const dist = Math.sqrt(dx * dx + dy * dy) * 111319; // meters
+      const dist = Math.sqrt(dx * dx + dy * dy) * 111319;
       if (dist < 25) {
         if (activePopup) activePopup.remove();
+
         let img = p.properties.image ? `<br><img src="files/${p.properties.image}" width="200">` : '';
+        let content = `
+          <div style="max-height: 180px; overflow-y: auto;">
+            <strong>${p.properties.name}</strong><br>
+            ${p.properties.description || ''}
+            ${img}
+          </div>`;
+
         activePopup = new maplibregl.Popup()
           .setLngLat(p.geometry.coordinates)
-          .setHTML(`<strong>${p.properties.name}</strong><br>${p.properties.description || ''}${img}`)
+          .setHTML(content)
           .addTo(map);
+
         p.shown = true;
       }
     }
